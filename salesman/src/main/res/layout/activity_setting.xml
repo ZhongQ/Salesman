@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.salesman.activity.personal.SettingActivity">
+
+    <include layout="@layout/common_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/no_content_bg"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View style="@style/SplitStrip_20" />
+
+            <include
+                layout="@layout/item_setting_msgs_sound"
+                android:visibility="gone" />
+
+            <include layout="@layout/item_modification_password" />
+
+            <include
+                layout="@layout/item_log_app"
+                android:visibility="gone" />
+
+            <include layout="@layout/item_about_us" />
+
+            <View style="@style/SplitStrip_20" />
+
+            <include layout="@layout/view_button" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

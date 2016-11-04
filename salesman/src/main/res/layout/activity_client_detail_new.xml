@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.salesman.activity.client.ClientDetailNewActivity">
+
+    <include layout="@layout/common_title_white" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/no_content_bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.studio.jframework.widget.listview.InnerListView
+                android:id="@+id/lv_client_detail"
+                style="@style/InnerListView_Style" />
+
+            <com.studio.jframework.widget.InnerGridView
+                android:id="@+id/gv_client_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:cacheColorHint="@color/transparent"
+                android:listSelector="@color/transparent"
+                android:numColumns="4"
+                android:paddingBottom="@dimen/margin_30"
+                android:paddingLeft="@dimen/margin_40"
+                android:paddingRight="@dimen/margin_40"
+                android:paddingTop="@dimen/margin_20"
+                android:scrollbars="none"
+                android:verticalSpacing="@dimen/margin_40" />
+
+            <ImageView style="@style/ListView_SplitLine_20" />
+
+            <include layout="@layout/view_button" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.salesman.activity.home.SigninMapActivity">
+
+    <include layout="@layout/common_title_db" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/bmapView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true" />
+
+        <ImageView
+            android:id="@+id/iv_location_hand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/margin_20dp"
+            android:layout_marginRight="@dimen/margin_12dp"
+            android:layout_marginTop="@dimen/margin_20dp"
+            android:src="@drawable/location_selector" />
+
+        <com.salesman.views.ZoomControlView
+            android:id="@+id/ZoomControlView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/iv_location_hand"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/margin_12dp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/line_shadow" />
+
+    </RelativeLayout>
+
+    <com.studio.jframework.widget.listview.UltimateListView
+        android:id="@+id/lv_nearby_address"
+        style="@style/ListView_BaseStyle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/tv_address_location"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_40dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/margin_12dp"
+        android:paddingRight="@dimen/margin_12dp"
+        android:singleLine="true"
+        android:textSize="12sp"
+        android:visibility="gone"
+        tools:text="广东省深圳市南山区" />
+
+</LinearLayout>

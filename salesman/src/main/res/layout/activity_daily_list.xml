@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.salesman.activity.personal.DailyListActivity">
+
+    <include
+        android:id="@+id/title_daily_list"
+        layout="@layout/common_title" />
+
+    <com.studio.jframework.widget.listview.UltimateListView
+        android:id="@+id/lv_common_0"
+        style="@style/ListView_BaseStyle"
+        android:layout_below="@+id/title_daily_list"
+        app:dividerHeight="@dimen/margin_10dp" />
+
+    <include
+        layout="@layout/view_comment_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_100"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

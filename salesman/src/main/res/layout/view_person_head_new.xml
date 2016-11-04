@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="@dimen/common_margin">
+
+    <FrameLayout
+        android:id="@+id/framelayout_head"
+        android:layout_width="@dimen/margin_100"
+        android:layout_height="@dimen/margin_100">
+
+        <ImageView
+            android:id="@+id/iv_head_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/administrator_icon" />
+
+        <TextView
+            android:id="@+id/tv_user_name2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size_32"
+            android:visibility="gone"
+            tools:text="李坏" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_user_name"
+            style="@style/Text_Black_36"
+            android:singleLine="true"
+            android:textColor="@color/color_333333"
+            tools:text="李坏" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_dept"
+                style="@style/Text_Black_24"
+                android:layout_marginRight="@dimen/margin_20"
+                android:textColor="@color/color_333333"
+                tools:text="南山班" />
+
+            <TextView
+                android:id="@+id/tv_post"
+                style="@style/Text_Black_24"
+                android:textColor="@color/color_333333"
+                tools:text="BD专员" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

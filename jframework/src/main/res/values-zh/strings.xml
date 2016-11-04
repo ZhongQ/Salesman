@@ -1,0 +1,4 @@
+<resources>
+    <string name="loading">正在加载...</string>
+    <string name="no_more">加载完毕，没有更多内容了</string>
+</resources>

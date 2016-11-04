@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.salesman.activity.manage.NoticeDetailActivity">
+
+    <include layout="@layout/common_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <include layout="@layout/view_notice_common" />
+
+            <ImageView style="@style/SplitLine_ImageView" />
+
+            <TextView
+                android:id="@+id/tv_title_notice_detail"
+                style="@style/Text_Black_32"
+                android:layout_marginTop="@dimen/margin_40"
+                android:gravity="center_horizontal"
+                android:paddingLeft="@dimen/common_margin"
+                android:paddingRight="@dimen/common_margin"
+                tools:text="开会通知开会通知开会通知开会通知开会通知开会通知开会通知开会通知开会通知开会通知" />
+
+            <TextView
+                android:id="@+id/tv_content_notice_detail"
+                style="@style/Text_666_28"
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:lineSpacingExtra="@dimen/margin_10"
+                android:padding="@dimen/margin_36"
+                tools:text="百度地图Android定位SDK是为Android移动端应用提供的一套简单易用的LBS定位服务接口，专注于为广大开发者提供最好的综合定位服务，通过使用百度定位SDK，开发者可以轻松为应用程序实现智能、精准、高效的定位功能。
+该套SDK免费对外开放，接口使用无次数限制。在使用前，您需先申请密钥（ak）才可使用。任何非营利性应用请直接使用，商业目的产品使用前请参考使用须知。
+在您使用百度地图Android SDK之前，请先阅读百度地图API使用条款。" />
+
+            <com.studio.jframework.widget.InnerGridView
+                android:id="@+id/gv_notice_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:cacheColorHint="@color/transparent"
+                android:listSelector="@color/transparent"
+                android:numColumns="4"
+                android:paddingBottom="@dimen/margin_30"
+                android:paddingLeft="@dimen/margin_40"
+                android:paddingRight="@dimen/margin_40"
+                android:scrollbars="none"
+                android:verticalSpacing="@dimen/margin_40"
+                android:visibility="visible" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_line_signin"
+        style="@style/SplitStrip_20"
+        android:layout_height="@dimen/margin_10dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_30dp"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/left_right_12dp"
+        android:paddingRight="@dimen/left_right_12dp">
+
+        <TextView
+            android:id="@+id/tv_signin_type"
+            style="@style/Text_009_12sp"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            tools:text="外勤签到" />
+
+        <TextView
+            android:id="@+id/tv_signin_num"
+            style="@style/Text_009_12sp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            tools:text="2/16" />
+    </RelativeLayout>
+
+    <ImageView style="@style/SplitLine_ImageView" />
+
+    <com.jude.easyrecyclerview.EasyRecyclerView
+        android:id="@+id/rv_inner_signin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/margin_20dp" />
+</LinearLayout>

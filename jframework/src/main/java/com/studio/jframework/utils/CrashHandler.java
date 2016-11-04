@@ -1,0 +1,266 @@
+package com.studio.jframework.utils;
+
+import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.PackageManager.NameNotFoundException;
+import android.os.Build;
+import android.os.Environment;
+import android.os.Looper;
+import android.text.TextUtils;
+import android.widget.Toast;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.PrintWriter;
+import java.io.StringWriter;
+import java.io.Writer;
+import java.lang.Thread.UncaughtExceptionHandler;
+import java.lang.reflect.Field;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
+
+/**
+ * Catch the uncaught exception
+ * <p>Usage: in Application, method onCreate;
+ * <p>CrashHandler crashHandler = CrashHandler.getInstance();
+ * <p>crashHandler.init(getApplicationContext(),"/crash/", "Application crashed, exiting...", new ExceptionOperator(){...});
+ * <p>add permission: android.permission.WRITE_EXTERNAL_STORAGE in manifest
+ *
+ * @author Jason
+ */
+public class CrashHandler implements UncaughtExceptionHandler {
+
+    public static final String TAG = "CrashHandler";
+
+    //Default path to save crash file
+    private static String crashFilePath = "Crash";
+
+    //The singleton of this class
+    private static CrashHandler INSTANCE;
+    //The message for toast to show
+    public String showMessage = null;
+    private Context mContext;
+    private UncaughtExceptionHandler mDefaultHandler;
+    private Map<String, String> crashInfo = new HashMap<>();
+    private ExceptionOperator exceptionOperator;
+    private boolean isDebug = false;
+
+    private CrashHandler() {
+    }
+
+    /**
+     * Gain the instance of this class
+     *
+     * @return The instance of this class
+     */
+    public static CrashHandler getInstance() {
+        if (INSTANCE == null) {
+            INSTANCE = new CrashHandler();
+        }
+        return INSTANCE;
+    }
+
+    /**
+     * Initialization of this crash handler
+     *
+     * @param context     Context
+     * @param filePath    Crash log file directory under root path, default is Crash
+     * @param showMessage The message for toast when crash happens
+     * @param isDebug     Indicate that whether is under the debug mode, if true,
+     *                    will not create crash log file and handle the exception by the system
+     * @param operator    The operator to tidy up the work after the crash, you need to exit the app
+     *                    in this method if you want to handle the exception by yourself
+     */
+    public void init(Context context, String filePath, String showMessage, boolean isDebug, ExceptionOperator operator) {
+        this.isDebug = isDebug;
+        exceptionOperator = operator;
+        if (!TextUtils.isEmpty(filePath)) {
+            crashFilePath = filePath;
+        }
+        if (!TextUtils.isEmpty(showMessage)) {
+            this.showMessage = showMessage;
+        }
+        mContext = context;
+        mDefaultHandler = Thread.getDefaultUncaughtExceptionHandler();
+        Thread.setDefaultUncaughtExceptionHandler(this);
+    }
+
+    /**
+     * The callback method that catch the exception, you can handle the
+     * exception here
+     */
+    @Override
+    public void uncaughtException(Thread thread, Throwable exception) {
+        boolean isHandle = handleException(exception);
+        if (isDebug) {
+            mDefaultHandler.uncaughtException(thread, exception);
+        }
+        if (!isHandle && mDefaultHandler != null) {
+            mDefaultHandler.uncaughtException(thread, exception);
+        } else {
+            try {
+                Thread.sleep(2500);
+                if (exceptionOperator != null) {
+                    exceptionOperator.onExceptionThrows();
+                }
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    private boolean handleException(Throwable exception) {
+        if (exception == null) {
+            return false;
+        }
+        new Thread() {
+            @Override
+            public void run() {
+                Looper.prepare();
+                if (showMessage != null && !isDebug) {
+                    Toast.makeText(mContext, showMessage, Toast.LENGTH_LONG).show();
+                }
+                Looper.loop();
+            }
+        }.start();
+        collectDeviceInfo(mContext);
+        saveCrashInfo2File(exception);
+        return true;
+    }
+
+    /**
+     * Collect Device info
+     *
+     * @param context Context
+     */
+    @SuppressLint("SimpleDateFormat")
+    public void collectDeviceInfo(Context context) {
+        try {
+            PackageManager pm = context.getPackageManager();
+            PackageInfo pi = pm.getPackageInfo(context.getPackageName(), PackageManager.GET_ACTIVITIES);
+            if (pi != null) {
+                SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+                String versionName = pi.versionName == null ? "null" : pi.versionName;
+                String versionCode = pi.versionCode + "";
+                crashInfo.put("versionName", versionName);
+                crashInfo.put("versionCode", versionCode);
+                crashInfo.put("currentTime", formatter.format(new Date(System.currentTimeMillis())));
+            }
+        } catch (NameNotFoundException e) {
+            e.printStackTrace();
+        }
+        Field[] fields = Build.class.getDeclaredFields();
+        for (Field field : fields) {
+            try {
+                field.setAccessible(true);
+                crashInfo.put(field.getName(), field.get(null).toString());
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    /**
+     * Save Info to files
+     *
+     * @param ex the exception this class throws
+     * @return save crash info to file successfully will return true, false otherwise
+     */
+    private boolean saveCrashInfo2File(Throwable ex) {
+        StringBuilder sb = new StringBuilder();
+        for (Map.Entry<String, String> entry : crashInfo.entrySet()) {
+            String key = entry.getKey();
+            String value = entry.getValue();
+            sb.append(key).append("=").append(value).append("\n");
+        }
+
+        Writer writer = new StringWriter();
+        PrintWriter printWriter = new PrintWriter(writer);
+        ex.printStackTrace(printWriter);
+        Throwable cause = ex.getCause();
+        while (cause != null) {
+            cause.printStackTrace(printWriter);
+            cause = cause.getCause();
+        }
+        printWriter.close();
+        String result = writer.toString();
+        sb.append(result);
+        LogUtils.e(TAG, sb.toString());
+        try {
+            if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
+                String path = Environment.getExternalStorageDirectory().getAbsolutePath()
+                        + File.separator + crashFilePath + File.separator;
+                String filePath = path + "crash.log";
+                File dir = new File(path);
+                if (!dir.exists()) {
+                    dir.mkdirs();
+                }
+                FileOutputStream fos = new FileOutputStream(filePath);
+                fos.write(sb.toString().getBytes());
+                fos.close();
+            }
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    /**
+     * Gain crash info from file if exist
+     *
+     * @return Crash info, will return null if file not exist
+     */
+    public static String getCrashInfo() {
+        String info = null;
+        String filePath = Environment.getExternalStorageDirectory().getAbsolutePath()
+                + File.separator + crashFilePath + File.separator + "crash.log";
+        File f = new File(filePath);
+        if (f.exists()) {
+            StringBuilder log = new StringBuilder();
+            try {
+                FileReader reader = new FileReader(f);
+                BufferedReader bReader = new BufferedReader(reader);
+                String buff;
+                while ((buff = bReader.readLine()) != null) {
+                    log.append(buff);
+                }
+                bReader.close();
+                reader.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            info = log.toString();
+            if (TextUtils.isEmpty(info)) {
+                return null;
+            }
+        }
+        return info;
+    }
+
+    /**
+     *
+     */
+    public static void deleteLogFile() {
+        String filePath = Environment.getExternalStorageDirectory().getAbsolutePath()
+                + File.separator + crashFilePath + File.separator + "crash.log";
+        File f = new File(filePath);
+        if (f.exists()) {
+            LogUtils.i(TAG, f.delete() ? "Deleted" : "Not delete");
+        }
+    }
+
+    public interface ExceptionOperator {
+        /**
+         * The callback for you to tidy up the job, such as save the instance
+         * or quit the whole application
+         */
+        void onExceptionThrows();
+    }
+}

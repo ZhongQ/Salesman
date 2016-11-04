@@ -1,0 +1,655 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <!-- colorPrimary 对应ActionBar的颜色。-->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <!-- colorPrimaryDark对应状态栏的颜色 -->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <!-- colorAccent 对应EditText编辑时、RadioButton选中、CheckBox等选中时的颜色 -->
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:listDivider">@drawable/divider_bg</item>
+    </style>
+
+    <style name="BaseAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorAccent">@color/color_007ed2</item>
+        <item name="android:windowBackground">@drawable/light_blue</item>
+        <!-- Customize your theme here. -->
+        <item name="colorPrimaryDark">@color/black</item>
+        <item name="android:windowAnimationStyle">@style/fade</item>
+    </style>
+
+    <style name="fade" parent="@android:style/Animation.Activity">
+        <!-- 新的activity创建进入效果 -->
+        <item name="android:activityOpenEnterAnimation">@anim/in_from_right</item>
+        <!-- activity还没有finish()下退出效果 -->
+        <item name="android:activityOpenExitAnimation">@anim/out_to_left</item>
+        <!-- activity返回进入效果 -->
+        <item name="android:activityCloseEnterAnimation">@anim/in_from_left</item>
+        <!-- activity finish()之后退出效果 -->
+        <item name="android:activityCloseExitAnimation">@anim/out_to_right</item>
+    </style>
+
+    <style name="FullScreenTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="FullScreenTheme_Translucence" parent="BaseAppTheme">
+        <item name="android:windowBackground">@color/color_cc000000</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>
+    </style>
+
+    <!--主界面底部tab风格-->
+    <style name="main_tab_bottom">
+        <item name="android:textSize">@dimen/size_20</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/transparent</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <!-- 去按钮立体效果 -->
+        <item name="android:button">@null</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+
+    <!--列表分割线ImageView-->
+    <style name="SplitLine_ImageView">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@drawable/divide_line_list</item>
+    </style>
+    <!--重分割线ImageView-->
+    <style name="SplitLine_ImageView_Foot">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@drawable/divide_line_foot</item>
+    </style>
+    <!--分割线20px-->
+    <style name="ListView_SplitLine_20">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/common_margin_20</item>
+        <item name="android:background">@color/no_content_bg</item>
+    </style>
+    <!--分割虚线ImageView-->
+    <style name="SplitLine_ImageView_Imaginary">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@drawable/imaginary_line_icon</item>
+    </style>
+
+    <style name="Base_Text">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/size_24</item>
+    </style>
+
+    <!-- 黑色-->
+    <!--20文字风格-->
+    <style name="Text_Black_20" parent="Base_Text">
+        <item name="android:textSize">@dimen/size_20</item>
+    </style>
+
+    <style name="Text_Black_10sp" parent="Base_Text">
+        <item name="android:textSize">@dimen/size_10sp</item>
+    </style>
+    <!--24文字风格-->
+    <style name="Text_Black_24" parent="Base_Text">
+        <item name="android:textSize">@dimen/size_24</item>
+    </style>
+
+    <style name="Text_Black_12sp" parent="Base_Text">
+        <item name="android:textSize">@dimen/size_12sp</item>
+    </style>
+    <!--28文字风格-->
+    <style name="Text_Black_28" parent="Base_Text">
+        <item name="android:textSize">@dimen/size_28</item>
+    </style>
+
+    <style name="Text_Black_14sp" parent="Base_Text">
+        <item name="android:textSize">@dimen/size_14sp</item>
+    </style>
+    <!--28文字风格-->
+    <style name="Text_Black_30" parent="Base_Text">
+        <item name="android:textSize">@dimen/size_30</item>
+    </style>
+    <!--32文字风格-->
+    <style name="Text_Black_32" parent="Base_Text">
+        <item name="android:textSize">@dimen/size_32</item>
+    </style>
+
+    <style name="Text_Black_16sp" parent="Base_Text">
+        <item name="android:textSize">@dimen/size_16sp</item>
+    </style>
+    <!--34文字风格-->
+    <style name="Text_Black_34" parent="Base_Text">
+        <item name="android:textSize">@dimen/size_34</item>
+    </style>
+    <!--36文字风格-->
+    <style name="Text_Black_36" parent="Base_Text">
+        <item name="android:textSize">@dimen/size_36</item>
+    </style>
+
+    <style name="Text_Black_48" parent="Base_Text">
+        <item name="android:textSize">@dimen/size_48</item>
+    </style>
+
+    <!-- 333333-->
+    <style name="Text_333_24" parent="Text_Black_24">
+        <item name="android:textColor">@color/color_333333</item>
+    </style>
+
+    <style name="Text_333_28" parent="Text_Black_28">
+        <item name="android:textColor">@color/color_333333</item>
+    </style>
+
+    <style name="Text_333_14sp" parent="Text_Black_14sp">
+        <item name="android:textColor">@color/color_333333</item>
+    </style>
+
+    <style name="Text_333_32" parent="Text_Black_32">
+        <item name="android:textColor">@color/color_333333</item>
+    </style>
+
+    <style name="Text_333_16sp" parent="Text_Black_16sp">
+        <item name="android:textColor">@color/color_333333</item>
+    </style>
+
+    <!-- 666666-->
+    <style name="Text_666_20" parent="Text_Black_20">
+        <item name="android:textColor">@color/color_666666</item>
+    </style>
+
+    <style name="Text_666_24" parent="Text_Black_24">
+        <item name="android:textColor">@color/color_666666</item>
+    </style>
+
+    <style name="Text_666_12sp" parent="Text_Black_12sp">
+        <item name="android:textColor">@color/color_666666</item>
+    </style>
+
+    <style name="Text_666_28" parent="Text_Black_28">
+        <item name="android:textColor">@color/color_666666</item>
+    </style>
+
+    <style name="Text_666_14sp" parent="Text_Black_14sp">
+        <item name="android:textColor">@color/color_666666</item>
+    </style>
+
+    <style name="Text_666_32" parent="Text_Black_32">
+        <item name="android:textColor">@color/color_666666</item>
+    </style>
+
+    <style name="Text_666_16sp" parent="Text_Black_16sp">
+        <item name="android:textColor">@color/color_666666</item>
+    </style>
+    <!-- 999999-->
+    <style name="Text_999_20" parent="Text_Black_20">
+        <item name="android:textColor">@color/color_999999</item>
+    </style>
+
+    <style name="Text_999_10sp" parent="Text_Black_10sp">
+        <item name="android:textColor">@color/color_999999</item>
+    </style>
+
+    <style name="Text_999_24" parent="Text_Black_24">
+        <item name="android:textColor">@color/color_999999</item>
+    </style>
+
+    <style name="Text_999_12sp" parent="Text_Black_12sp">
+        <item name="android:textColor">@color/color_999999</item>
+    </style>
+
+    <style name="Text_999_28" parent="Text_Black_28">
+        <item name="android:textColor">@color/color_999999</item>
+    </style>
+
+    <style name="Text_999_14sp" parent="Text_Black_14sp">
+        <item name="android:textColor">@color/color_999999</item>
+    </style>
+
+    <style name="Text_999_32" parent="Text_Black_32">
+        <item name="android:textColor">@color/color_999999</item>
+    </style>
+
+    <style name="Text_999_36" parent="Text_Black_36">
+        <item name="android:textColor">@color/color_999999</item>
+    </style>
+
+    <style name="Text_999_48" parent="Text_Black_48">
+        <item name="android:textColor">@color/color_999999</item>
+    </style>
+    <!-- cccccc-->
+    <style name="Text_ccc_24" parent="Text_Black_24">
+        <item name="android:textColor">@color/color_cccccc</item>
+    </style>
+
+    <style name="Text_ccc_28" parent="Text_Black_28">
+        <item name="android:textColor">@color/color_cccccc</item>
+    </style>
+    <!-- aaaaaa-->
+    <style name="Text_aaa_24" parent="Text_Black_24">
+        <item name="android:textColor">@color/color_aaaaaa</item>
+    </style>
+
+    <style name="Text_aaa_12sp" parent="Text_Black_12sp">
+        <item name="android:textColor">@color/color_aaaaaa</item>
+    </style>
+
+    <style name="Text_aaa_28" parent="Text_Black_28">
+        <item name="android:textColor">@color/color_aaaaaa</item>
+    </style>
+
+    <style name="Text_aaa_32" parent="Text_Black_32">
+        <item name="android:textColor">@color/color_aaaaaa</item>
+    </style>
+    <!-- 007ed2-->
+    <style name="Text_007_24" parent="Text_Black_24">
+        <item name="android:textColor">@color/color_007ed2</item>
+    </style>
+
+    <style name="Text_007_28" parent="Text_Black_28">
+        <item name="android:textColor">@color/color_007ed2</item>
+    </style>
+
+    <style name="Text_007_32" parent="Text_Black_32">
+        <item name="android:textColor">@color/color_007ed2</item>
+    </style>
+    <!-- 白色-->
+    <style name="Text_fff_24" parent="Text_Black_24">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Text_fff_12sp" parent="Text_Black_12sp">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Text_fff_28" parent="Text_Black_28">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Text_fff_30" parent="Text_Black_30">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Text_fff_36" parent="Text_Black_36">
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <!--红色-->
+    <style name="Text_red_28" parent="Text_Black_28">
+        <item name="android:textColor">@color/color_ff3636</item>
+    </style>
+
+    <style name="Text_red_14sp" parent="Text_Black_14sp">
+        <item name="android:textColor">@color/color_ff3636</item>
+    </style>
+    <!--蓝色-->
+    <style name="Text_009_24" parent="Text_Black_24">
+        <item name="android:textColor">@color/color_0090ff</item>
+    </style>
+
+    <style name="Text_009_12sp" parent="Text_Black_12sp">
+        <item name="android:textColor">@color/color_0090ff</item>
+    </style>
+
+    <style name="Text_009_28" parent="Text_Black_28">
+        <item name="android:textColor">@color/color_0090ff</item>
+    </style>
+
+    <style name="Text_009_14sp" parent="Text_Black_14sp">
+        <item name="android:textColor">@color/color_0090ff</item>
+    </style>
+
+    <style name="Text_009_32" parent="Text_Black_32">
+        <item name="android:textColor">@color/color_0090ff</item>
+    </style>
+
+    <!--输入框风格-->
+    <style name="BaseEditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/little_black</item>
+        <item name="android:textColorHint">@color/little_grey_txt</item>
+        <item name="android:textSize">@dimen/size_24</item>
+        <item name="android:textCursorDrawable">@drawable/color_cursor</item>
+    </style>
+
+    <!--发公告风格-->
+    <style name="NoticeEditText" parent="BaseEditText">
+        <item name="android:paddingLeft">@dimen/common_margin</item>
+        <item name="android:paddingRight">@dimen/common_margin</item>
+        <item name="android:textSize">@dimen/size_28</item>
+    </style>
+
+    <!--客户输入框风格-->
+    <style name="ClientEditText" parent="BaseEditText">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textSize">@dimen/size_28</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <!--签到风格-->
+    <style name="SigninEditText" parent="BaseEditText">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">top|left</item>
+        <item name="android:maxLength">200</item>
+        <item name="android:textSize">@dimen/size_32</item>
+    </style>
+
+    <!--客户Layout风格-->
+    <style name="Client_Layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/margin_90</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingRight">@dimen/margin_24</item>
+        <item name="android:paddingLeft">@dimen/margin_24</item>
+        <item name="android:background">@drawable/light_grey_selector</item>
+    </style>
+
+    <!--客户Text风格1-->
+    <style name="Client_Text1" parent="Text_Black_32">
+        <item name="android:layout_width">@dimen/margin_216</item>
+    </style>
+
+    <!--客户Text风格2-->
+    <style name="Client_Text2" parent="Text_Black_28">
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <!--客户Text风格3-->
+    <style name="Client_Text3" parent="Base_Text">
+        <item name="android:drawablePadding">@dimen/margin_5</item>
+        <item name="android:drawableRight">@drawable/arrow_right_grey</item>
+        <item name="android:textSize">@dimen/size_24</item>
+        <item name="android:text">""</item>
+    </style>
+
+    <!--客户Image风格-->
+    <style name="Client_Image">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:src">@drawable/arrow_right_grey</item>
+    </style>
+    <!--客户分割线-->
+    <style name="Client_SplitLine">
+        <item name="android:layout_marginLeft">@dimen/margin_24</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@drawable/line_divide_grey</item>
+    </style>
+
+    <!--客户分割条-->
+    <style name="SplitStrip_20">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/margin_20</item>
+        <item name="android:background">@color/ui_bg</item>
+    </style>
+
+    <!--开关风格-->
+    <style name="ToggleButton">
+        <item name="android:layout_height">@dimen/margin_50</item>
+        <item name="android:layout_width">@dimen/margin_80</item>
+        <item name="android:background">@drawable/toggle_selector</item>
+        <item name="android:checked">false</item>
+        <item name="android:textOff">""</item>
+        <item name="android:textOn">""</item>
+    </style>
+
+    <!--单选按钮风格-->
+    <style name="RadioButton_Style" parent="Text_Black_28">
+        <item name="android:button">@null</item>
+        <item name="android:drawableLeft">@drawable/rb_selector</item>
+        <item name="android:drawablePadding">@dimen/margin_20</item>
+    </style>
+
+    <!--自定义Checkbox-->
+    <style name="CustomCheckboxTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/checkbox_style</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!--InnerListView风格-->
+    <style name="InnerListView_Style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:divider">@color/transparent</item>
+        <item name="android:dividerHeight">0dp</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:cacheColorHint">@color/transparent</item>
+    </style>
+
+    <!--客户筛选TextView风格dp-->
+    <style name="Client_Filtrate_Text_Style_DP">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textSize">@dimen/size_12sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:background">@drawable/tv_grey_bg_shape</item>
+        <item name="android:layout_marginBottom">@dimen/margin_6dp</item>
+        <item name="android:drawablePadding">@dimen/margin_3dp</item>
+        <item name="android:drawableRight">@drawable/arrow_down_grey</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingRight">@dimen/margin_6dp</item>
+        <item name="android:paddingLeft">@dimen/margin_6dp</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <!--客户筛选LinearLayout风格dp-->
+    <style name="Client_Filtrate_Lay_Style_DP">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    <!--客户筛选LinearLayout风格px-->
+    <style name="Client_Filtrate_Lay_Style_PX">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    <!--客户筛选LinearLayout风格px-->
+    <style name="Client_Filtrate_Text_Style_PX" parent="Text_Black_24">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginBottom">@dimen/margin_12</item>
+        <item name="android:background">@drawable/tv_grey_bg_shape</item>
+        <item name="android:drawablePadding">@dimen/margin_6</item>
+        <item name="android:drawableRight">@drawable/arrow_down_grey</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">@dimen/margin_12</item>
+        <item name="android:paddingRight">@dimen/margin_12</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <!--客户筛选ImageView风格-->
+    <style name="Client_Filtrate_ImageView_Style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:src">@drawable/client_filtrate_bg</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <!--客户Text风格1,版本V1.4.0-->
+    <style name="Client_Text_New1" parent="Text_Black_32">
+        <item name="android:layout_width">@dimen/margin_250</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">start</item>
+    </style>
+    <!--客户Text风格1,版本V1.4.0-->
+    <style name="Client_Text_New2" parent="Text_Black_28">
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">start</item>
+    </style>
+    <!-- 各界面列表风格-->
+    <style name="ListView_BaseStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/ui_bg</item>
+        <item name="dividerDrawable">@color/ui_bg</item>
+        // 自定义属性，分割线颜色
+        <item name="dividerHeight">@dimen/margin_2</item>
+        // 自定义属性，分割线高
+    </style>
+
+    <!-- 新功能引导页按钮风格-->
+    <style name="NewActionGuideBtnStyle">
+        <item name="android:id">@id/iv_i_know</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">bottom|center_horizontal</item>
+        <item name="android:layout_marginBottom">@dimen/margin_180</item>
+        <item name="android:src">@drawable/i_know_icon</item>
+    </style>
+
+    <style name="NewActionGuideBtnStyle2" parent="NewActionGuideBtnStyle">
+        <item name="android:src">@drawable/i_know_step_icon</item>
+
+    </style>
+
+    <!-- 自定义圆角矩形（圆）风格-->
+    <style name="CircleHeadView_Style_90">
+        <item name="android:layout_width">@dimen/margin_90</item>
+        <item name="android:layout_height">@dimen/margin_90</item>
+        <item name="circle_angle">6</item>
+        <item name="shape">rectangle</item>
+        <item name="text_color_cir">@color/white</item>
+        <item name="text_size_cir">@dimen/size_12sp</item>
+    </style>
+
+    <style name="CircleHeadView_Style_80" parent="CircleHeadView_Style_90">
+        <item name="android:layout_width">@dimen/margin_80</item>
+        <item name="android:layout_height">@dimen/margin_80</item>
+    </style>
+
+    <style name="CircleHeadView_Style_70" parent="CircleHeadView_Style_90">
+        <item name="android:layout_width">@dimen/margin_70</item>
+        <item name="android:layout_height">@dimen/margin_70</item>
+    </style>
+
+    <style name="CircleHeadView_Style_60" parent="CircleHeadView_Style_90">
+        <item name="android:layout_width">@dimen/margin_60</item>
+        <item name="android:layout_height">@dimen/margin_60</item>
+    </style>
+
+    <style name="CircleHeadView_Style_100" parent="CircleHeadView_Style_90">
+        <item name="android:layout_width">@dimen/margin_100</item>
+        <item name="android:layout_height">@dimen/margin_100</item>
+    </style>
+
+    <!--标题栏风格-->
+    <style name="Title_Text_Style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/title_text_color</item>
+        <item name="android:textSize">@dimen/size_36</item>
+        <item name="android:text">@string/title</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Title_LeftBtn_Style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textColor">@color/title_text_color_sub</item>
+        <item name="android:textSize">@dimen/size_30</item>
+        <item name="android:text">@string/back</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:drawableLeft">@drawable/arrows_left</item>
+        <item name="android:drawablePadding">@dimen/margin_10</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">@dimen/margin_24</item>
+        <item name="android:paddingRight">@dimen/margin_30</item>
+    </style>
+
+    <style name="Title_RightBtn_Style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textColor">@color/title_text_color_sub</item>
+        <item name="android:textSize">@dimen/size_30</item>
+        <item name="android:text">"右边"</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:paddingLeft">@dimen/margin_24</item>
+        <item name="android:paddingRight">@dimen/margin_24</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <!--卡片布局风格-->
+    <style name="CardView_Style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/common_margin</item>
+        <item name="android:layout_marginRight">@dimen/common_margin</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+        <item name="cardBackgroundColor">@color/white</item>
+        <item name="cardCornerRadius">@dimen/margin_20</item>
+        <item name="cardElevation">@dimen/margin_12</item>
+        <item name="cardPreventCornerOverlap">true</item>
+        <item name="cardUseCompatPadding">true</item>
+    </style>
+
+    <!--界面基础风格-->
+    <style name="EasyRecyclerView_Style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/ui_bg</item>
+        <item name="scrollbars">none</item>
+        <item name="layout_progress">@layout/view_progress</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+        <item name="layout_empty">@layout/view_empty_rv</item>
+    </style>
+
+    <style name="RecyclerView_BaseStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/ui_bg</item>
+        <item name="android:scrollbars">none</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+    </style>
+
+    <!--界面基础风格-->
+    <style name="Layout_Base_Style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/ui_bg</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <!--横向进度条-->
+    <style name="Progress_Horizontal_Style">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/progressbar_horizontal_1</item>
+        <item name="android:indeterminateDrawable">
+            @android:drawable/progress_indeterminate_horizontal
+        </item>
+        <item name="android:layout_width">@dimen/margin_288</item>
+        <item name="android:layout_height">@dimen/margin_60</item>
+    </style>
+
+    <!--业绩趋势垂直线-->
+    <style name="SplitLine_ImageView_Vertical">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/margin_20</item>
+        <item name="android:layout_marginRight">@dimen/margin_20</item>
+        <item name="android:background">@drawable/line_vertical_short1</item>
+    </style>
+
+</resources>

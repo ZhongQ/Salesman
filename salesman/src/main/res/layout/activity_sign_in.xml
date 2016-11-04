@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/no_content_bg"
+    android:orientation="vertical"
+    tools:context="com.salesman.activity.home.SignInActivity">
+
+    <include layout="@layout/common_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/common_margin">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_92"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Text_Black_32"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="时间：" />
+
+            <TextView
+                android:id="@+id/tv_signin_time"
+                style="@style/Text_Black_32"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="2016年1月25日16:36:56" />
+        </LinearLayout>
+
+        <ImageView style="@style/SplitLine_ImageView" />
+
+        <LinearLayout
+            android:id="@+id/lay_address_signin"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_92"
+            android:background="@drawable/button_ripple"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Text_Black_32"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="地址：" />
+
+            <TextView
+                android:id="@+id/tv_signin_address"
+                style="@style/Text_Black_32"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:drawableRight="@drawable/arrow_right_grey"
+                android:paddingRight="@dimen/margin_20"
+                android:singleLine="true"
+                tools:text="武汉大学研究院武汉大学研究院武汉大学研究院" />
+        </LinearLayout>
+
+
+        <ImageView style="@style/SplitLine_ImageView" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_92"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Text_Black_32"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="类型：" />
+
+            <RadioGroup
+                android:id="@+id/rg_signin"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/margin_92"
+                android:layout_weight="5"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_gotowork"
+                    style="@style/RadioButton_Style"
+                    android:checked="true"
+                    android:text="@string/go_to_work" />
+
+                <RadioButton
+                    android:id="@+id/rb_getoffwork"
+                    style="@style/RadioButton_Style"
+                    android:layout_marginLeft="@dimen/margin_100"
+                    android:text="@string/get_off_work" />
+            </RadioGroup>
+        </LinearLayout>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/et_remark_signin"
+        style="@style/SigninEditText"
+        android:layout_height="@dimen/margin_300"
+        android:layout_marginTop="@dimen/margin_20"
+        android:hint="@string/hint_signin"
+        android:paddingBottom="@dimen/margin_35"
+        android:paddingLeft="@dimen/margin_40"
+        android:paddingRight="@dimen/margin_40"
+        android:paddingTop="@dimen/margin_35" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/margin_35"
+        android:paddingLeft="@dimen/margin_40"
+        android:paddingRight="@dimen/margin_40">
+
+        <RelativeLayout
+            android:layout_width="@dimen/margin_146"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_signin"
+                android:layout_width="@dimen/margin_130"
+                android:layout_height="@dimen/margin_130"
+                android:layout_marginTop="@dimen/margin_10"
+                android:scaleType="centerCrop"
+                android:src="@drawable/select_pic_icon" />
+
+            <ImageView
+                android:id="@+id/iv_del_pic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:paddingBottom="@dimen/margin_10"
+                android:paddingLeft="@dimen/margin_10"
+                android:src="@drawable/delete_pic" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/transparent" />
+
+    <include layout="@layout/view_button" />
+</LinearLayout>

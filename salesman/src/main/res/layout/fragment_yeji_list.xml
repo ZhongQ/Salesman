@@ -1,0 +1,9 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Layout_Base_Style">
+
+    <com.jude.easyrecyclerview.EasyRecyclerView
+        android:id="@+id/rv_yeji_rank"
+        style="@style/EasyRecyclerView_Style" />
+
+</FrameLayout>

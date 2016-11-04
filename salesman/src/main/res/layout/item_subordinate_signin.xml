@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_line_sub_signin"
+        style="@style/ListView_SplitLine_20" />
+
+    <include layout="@layout/view_head_text_grey_bg" />
+
+    <include layout="@layout/view_signin_line" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_90"
+        android:background="@drawable/button_ripple"
+        android:paddingLeft="@dimen/margin_40"
+        android:paddingRight="@dimen/common_margin">
+
+        <TextView
+            android:id="@+id/tv_name_signin"
+            style="@style/Text_Black_32"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="张三" />
+
+        <TextView
+            android:id="@+id/tv_time_signin"
+            style="@style/Text_aaa_24"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:drawablePadding="@dimen/margin_10"
+            android:drawableRight="@drawable/arrow_right_grey"
+            android:text="9:29:59" />
+    </RelativeLayout>
+
+</LinearLayout>

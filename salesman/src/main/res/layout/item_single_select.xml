@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/margin_45dp"
+    android:background="@drawable/button_ripple"
+    android:paddingLeft="@dimen/margin_25dp"
+    android:paddingRight="@dimen/margin_25dp">
+
+    <TextView
+        android:id="@+id/tv_no"
+        style="@style/Text_009_14sp"
+        android:layout_centerVertical="true"
+        tools:text="深圳大区" />
+
+    <ImageView
+        android:id="@+id/iv_biaozhi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/blue_gou_check" />
+
+</RelativeLayout>

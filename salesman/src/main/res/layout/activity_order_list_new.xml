@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_order_list_new"
+    style="@style/Layout_Base_Style"
+    tools:context="com.salesman.activity.work.OrderListNewActivity">
+
+    <include layout="@layout/common_title" />
+
+    <com.jude.easyrecyclerview.EasyRecyclerView
+        android:id="@+id/rv_order_list"
+        style="@style/EasyRecyclerView_Style" />
+</LinearLayout>

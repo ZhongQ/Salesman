@@ -1,0 +1,17 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.salesman.fragment.WorkFragment">
+
+    <include layout="@layout/common_title_white2" />
+
+    <include layout="@layout/view_head_zhanji" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview_work"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

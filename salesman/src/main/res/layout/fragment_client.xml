@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Layout_Base_Style"
+    tools:context="com.salesman.fragment.ClientFragment">
+
+    <include layout="@layout/common_title_white2" />
+
+    <include layout="@layout/view_client_filtrate" />
+
+    <com.jude.easyrecyclerview.EasyRecyclerView
+        android:id="@+id/rv_client"
+        style="@style/EasyRecyclerView_Style" />
+
+</LinearLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lay_item_rank_zhanji"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/margin_50dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/margin_25dp"
+        android:paddingRight="@dimen/margin_22dp">
+
+        <FrameLayout
+            android:layout_width="@dimen/margin_16dp"
+            android:layout_height="@dimen/margin_23dp"
+            android:layout_marginRight="@dimen/margin_20dp">
+
+            <ImageView
+                android:id="@+id/iv_medal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/gold_medal_icon" />
+
+            <TextView
+                android:id="@+id/tv_rank"
+                style="@style/Text_666_12sp"
+                android:layout_gravity="center"
+                android:text="1" />
+        </FrameLayout>
+
+        <com.salesman.views.CircleHeadView
+            android:id="@+id/hv_rank_zhanji"
+            android:layout_width="@dimen/margin_25dp"
+            android:layout_height="@dimen/margin_25dp"
+            app:circle_color="@color/color_ff9e00"
+            app:text_color_cir="@color/white"
+            app:text_content="李坏"
+            app:text_size_cir="@dimen/size_10sp" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            style="@style/Text_666_14sp"
+            android:layout_width="@dimen/margin_0dp"
+            android:layout_marginLeft="@dimen/margin_10dp"
+            android:layout_weight="1"
+            android:text="李坏" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            style="@style/Text_999_10sp"
+            android:layout_marginRight="@dimen/margin_10dp"
+            android:text="17:16" />
+
+        <ImageView
+            android:id="@+id/iv_arrow_rank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_up_red" />
+    </LinearLayout>
+
+    <ImageView
+        style="@style/SplitLine_ImageView"
+        android:layout_marginLeft="@dimen/margin_15dp"
+        android:layout_marginRight="@dimen/margin_15dp" />
+</LinearLayout>

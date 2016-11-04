@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/margin_110"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/common_margin"
+    android:paddingRight="@dimen/common_margin">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_20">
+
+        <ImageView
+            android:id="@+id/iv_background_obj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/circle_1" />
+
+        <TextView
+            android:id="@+id/tv_nick_obj"
+            style="@style/Text_Black_28"
+            android:layout_gravity="center"
+            android:text="土豆"
+            android:textColor="@color/white" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_name_sub"
+        style="@style/Text_Black_32"
+        android:layout_width="0dp"
+        android:layout_marginLeft="@dimen/margin_20"
+        android:layout_weight="1"
+        android:text="李土豆" />
+
+    <TextView
+        android:id="@+id/tv_daily_sub"
+        android:layout_width="@dimen/margin_100"
+        android:layout_height="@dimen/margin_50"
+        android:background="@drawable/et_background_shape"
+        android:gravity="center"
+        android:text="@string/report"
+        android:textColor="@color/grey_black"
+        android:textSize="@dimen/size_24" />
+
+    <TextView
+        android:id="@+id/tv_track_sub"
+        android:layout_width="@dimen/margin_100"
+        android:layout_height="@dimen/margin_50"
+        android:layout_marginLeft="@dimen/margin_30"
+        android:background="@drawable/et_background_shape"
+        android:gravity="center"
+        android:text="足迹"
+        android:textColor="@color/grey_black"
+        android:textSize="@dimen/size_24" />
+
+    <TextView
+        android:id="@+id/tv_sign_sub"
+        android:layout_width="@dimen/margin_100"
+        android:layout_height="@dimen/margin_50"
+        android:layout_marginLeft="@dimen/margin_30"
+        android:background="@drawable/et_background_shape"
+        android:gravity="center"
+        android:text="签到"
+        android:textColor="@color/grey_black"
+        android:textSize="@dimen/size_24" />
+</LinearLayout>

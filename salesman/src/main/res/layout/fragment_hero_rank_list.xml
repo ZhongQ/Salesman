@@ -1,0 +1,42 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Layout_Base_Style">
+
+    <com.jude.easyrecyclerview.EasyRecyclerView
+        android:id="@+id/rv_yeji_rank"
+        style="@style/EasyRecyclerView_Style"
+        android:layout_height="@dimen/margin_0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:id="@+id/lay_rank_self"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_120"
+        android:background="@color/color_daefff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/margin_40"
+        android:paddingRight="@dimen/margin_40">
+
+        <TextView
+            android:id="@+id/tv_rank"
+            style="@style/Text_009_32"
+            android:layout_gravity="center"
+            tools:text="1" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            style="@style/Text_009_32"
+            android:layout_width="@dimen/margin_0dp"
+            android:layout_marginLeft="@dimen/margin_40"
+            android:layout_weight="1"
+            tools:text="李坏" />
+
+        <TextView
+            android:id="@+id/tv_rank_detail"
+            style="@style/Text_999_24"
+            android:layout_marginRight="@dimen/margin_20"
+            tools:text="排名上升：10" />
+    </LinearLayout>
+
+</LinearLayout>

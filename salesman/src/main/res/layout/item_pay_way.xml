@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/margin_90"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/common_margin">
+
+    <ImageView
+        android:id="@+id/iv_pay_way"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/alipay_icon" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/margin_20"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_name_pay"
+                style="@style/Text_Black_32"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="李土豆" />
+
+            <CheckBox
+                android:id="@+id/cb_pay_way"
+                style="@style/CustomCheckboxTheme"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingBottom="@dimen/margin_20"
+                android:paddingRight="@dimen/common_margin"
+                android:paddingTop="@dimen/margin_20" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_line_pay_way"
+            style="@style/SplitLine_ImageView" />
+    </LinearLayout>
+</LinearLayout>

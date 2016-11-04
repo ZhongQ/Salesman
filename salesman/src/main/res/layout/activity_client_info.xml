@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_client_info"
+    style="@style/Layout_Base_Style"
+    tools:context="com.salesman.activity.client.ClientInfoActivity">
+
+    <include layout="@layout/common_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/ui_bg"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/margin_30"
+                android:paddingLeft="@dimen/common_margin"
+                android:paddingRight="@dimen/common_margin">
+
+                <include layout="@layout/view_client_info" />
+
+                <ImageView style="@style/SplitLine_ImageView" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_30"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/Text_666_28"
+                        android:text="店铺负责人：" />
+
+                    <TextView
+                        android:id="@+id/tv_boss_name"
+                        style="@style/Text_666_28"
+                        tools:text="贾老板" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/Text_666_28"
+                        android:text="注册手机号：" />
+
+                    <TextView
+                        android:id="@+id/tv_tel1"
+                        style="@style/Text_666_28"
+                        tools:text="13666666666" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/Text_666_28"
+                        android:text="常用手机号：" />
+
+                    <TextView
+                        android:id="@+id/tv_tel2"
+                        style="@style/Text_666_28"
+                        tools:text="13666666666" />
+
+                    <ImageView
+                        android:id="@+id/iv_call"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/common_margin_20"
+                        android:paddingRight="@dimen/common_margin_20"
+                        android:src="@drawable/call_icon" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/Text_666_28"
+                        android:text="所属区域：" />
+
+                    <TextView
+                        android:id="@+id/tv_area"
+                        style="@style/Text_666_28"
+                        tools:text="广东省深圳市南山区" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/Text_666_28"
+                        android:text="所属定格：" />
+
+                    <TextView
+                        android:id="@+id/tv_dingge"
+                        style="@style/Text_666_28"
+                        tools:text="南山仓定格" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/Text_666_28"
+                        android:text="店铺地址：" />
+
+                    <TextView
+                        android:id="@+id/tv_address"
+                        style="@style/Text_666_28"
+                        tools:text="武汉大学深圳产学研大楼" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/Text_666_28"
+                        android:text="业务员：" />
+
+                    <TextView
+                        android:id="@+id/tv_salesman"
+                        style="@style/Text_666_28"
+                        tools:text="飞师妹" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/Text_666_28"
+                        android:text="路线：" />
+
+                    <TextView
+                        android:id="@+id/tv_line"
+                        style="@style/Text_666_28"
+                        tools:text="1号线" />
+
+                    <TextView
+                        android:id="@+id/tv_change_line"
+                        style="@style/Text_009_24"
+                        android:layout_marginLeft="@dimen/common_margin_20"
+                        android:drawablePadding="@dimen/margin_10"
+                        android:drawableRight="@drawable/arrow_right_blue"
+                        android:text="更改路线" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView style="@style/SplitLine_ImageView_Foot" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cd_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/margin_0"
+                app:cardElevation="@dimen/margin_0"
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_100"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/margin_20"
+                        android:paddingRight="@dimen/margin_20">
+
+                        <com.salesman.views.CircleHeadView
+                            android:id="@+id/hv_order"
+                            style="@style/CircleHeadView_Style_60"
+                            android:layout_marginRight="@dimen/margin_10"
+                            app:circle_color="@color/color_ff9e00"
+                            app:circle_src="@drawable/shop_icon"
+                            app:shape="rectangle" />
+
+                        <TextView
+                            android:id="@+id/tv_name_store"
+                            style="@style/Text_333_32"
+                            android:layout_weight="1"
+                            tools:text="芙蓉兴盛便利店" />
+
+                        <ImageView
+                            android:id="@+id/iv_ziying"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/zhuanjiao_ziying_icon" />
+
+                    </LinearLayout>
+
+                    <ImageView style="@style/SplitLine_ImageView" />
+
+                    <TextView
+                        android:id="@+id/tv_time_order"
+                        style="@style/Text_666_24"
+                        android:layout_marginLeft="@dimen/margin_20"
+                        android:layout_marginTop="@dimen/common_margin"
+                        tools:text="2016-09-22 18:48:59" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_20"
+                        android:layout_marginTop="@dimen/margin_16"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/Text_666_28"
+                            android:text="手机号码：" />
+
+                        <TextView
+                            android:id="@+id/tv_mobile"
+                            style="@style/Text_666_28"
+                            android:layout_marginLeft="@dimen/margin_10"
+                            tools:text="13688886666" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_20"
+                        android:layout_marginTop="@dimen/margin_16"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/Text_666_28"
+                            android:text="订单编号：" />
+
+                        <TextView
+                            android:id="@+id/tv_no_order"
+                            style="@style/Text_666_28"
+                            android:layout_marginLeft="@dimen/margin_10"
+                            android:singleLine="true"
+                            tools:text="20160622185259" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/common_margin"
+                        android:layout_marginLeft="@dimen/margin_20"
+                        android:layout_marginTop="@dimen/margin_16"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/Text_666_28"
+                            android:text="金额：" />
+
+                        <TextView
+                            android:id="@+id/tv_money_order"
+                            style="@style/Text_009_28"
+                            android:layout_marginLeft="@dimen/margin_10"
+                            tools:text="66666" />
+
+                        <TextView
+                            style="@style/Text_666_28"
+                            android:layout_weight="1"
+                            android:text="元" />
+
+                        <TextView
+                            android:id="@+id/tv_state_order"
+                            style="@style/Text_red_28"
+                            android:layout_marginRight="@dimen/margin_20"
+                            tools:text="已取消" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/iv_line_order"
+                        style="@style/SplitLine_ImageView"
+                        android:layout_marginLeft="@dimen/margin_20"
+                        android:layout_marginRight="@dimen/margin_20"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/tv_look_more_order"
+                        style="@style/Text_666_28"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_90"
+                        android:drawableRight="@drawable/arrow_right_grey"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/margin_20"
+                        android:paddingRight="@dimen/margin_20"
+                        android:text="查看该店铺历史订单"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

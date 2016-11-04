@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="little_red">#ed4b1c</color>
+    <color name="little_grey_line">#dcdcdc</color>
+    <color name="grey_line">#c8c8c8</color>
+    <color name="little_grey_bg">#eeeeee</color>
+    <color name="dark_grey_bg">#e6e6e6</color>
+    <color name="little_grey_bottom_bg">#f7f7f7</color>
+    <color name="little_grey_txt">#aaaaaa</color>
+    <color name="black">#000000</color>
+    <color name="white_black">#00000000</color>
+    <color name="white">#ffffff</color>
+    <color name="little_blue">#00a9fe</color>
+
+    <color name="little_black">#333333</color>
+    <color name="order_center_bg">#f8f8f8</color>
+    <color name="dark_red">#CD0000</color>
+    <color name="tanrparent">#00000000</color>
+    <color name="blue">#3895CB</color>
+    <color name="dark_blue">#4E449D</color>
+    <color name="little_pink_bg">#fef9f8</color>
+    <color name="red_orange">#F67327</color>
+    <color name="bule_bg">#3ba2ea</color>
+    <color name="golden_yellow">#ffed28</color>
+    <color name="dark_yellow">#f7b10a</color>
+    <color name="grey_bg">#f6f6f6</color>
+
+    <color name="gray">#e2e2e2</color>
+    <color name="et_hintcolor">#e3e3e3</color>
+    <color name="color_007">#007ed2</color>
+
+    <!-- 常用圆形颜色-->
+    <color name="color_9e8bc1">#9e8bc1</color>
+    <color name="color_78c06e">#78c06e</color>
+    <color name="color_7082ea">#7082ea</color>
+    <color name="color_7896a4">#7896a4</color>
+    <color name="color_c8ce67">#c8ce67</color>
+    <color name="color_c482d7">#c482d7</color>
+    <color name="color_f65e8d">#f65e8d</color>
+    <color name="color_ff8e6b">#ff8e6b</color>
+    <color name="color_ff943e">#ff943e</color>
+    <color name="color_ff9e00">#ff9e00</color>
+
+    <!--常用颜色-->
+    <color name="grey_black">#666666</color>
+    <color name="dark_grey">#cccccc</color>
+    <color name="color_666666">#666666</color>
+    <color name="color_cccccc">#cccccc</color>
+    <color name="color_aaaaaa">#aaaaaa</color>
+    <color name="color_000000">#000000</color>
+    <color name="color_cc000000">#cc000000</color>// 0.8倍黑色
+    <color name="color_b2000000">#b2000000</color>// 0.7倍黑色
+    <color name="color_99000000">#99000000</color>// 0.6倍黑色
+    <color name="color_2b2b2b">#2b2b2b</color>
+    <color name="color_333333">#333333</color>
+    <color name="color_0092f5">#0092f5</color>
+    <color name="color_bcbcbc">#bcbcbc</color>
+    <color name="color_0079ff">#0079ff</color>
+    <color name="color_737373">#737373</color>
+    <color name="color_f3f3f3">#f3f3f3</color>
+    <color name="color_0297fa">#0297fa</color>
+    <color name="color_0396f8">#0396f8</color>
+    <color name="color_ff4a4a">#ff4a4a</color>
+    <color name="color_35acfb">#35acfb</color>
+    <color name="color_fec955">#fec955</color>
+    <color name="color_ea3200">#ea3200</color>
+    <color name="color_f7f7f7">#f7f7f7</color>
+    <color name="color_999999">#999999</color>
+    <color name="color_eeeeee">#eeeeee</color>
+    <color name="color_ff3636">#ff3636</color>
+    <color name="color_e5e5e5">#e5e5e5</color>
+    <color name="color_0090ff">#0090ff</color>
+    <color name="color_ff9a20">#ff9a20</color>
+    <color name="color_13c0c9">#13c0c9</color>
+    <color name="color_ffb644">#ffb644</color>
+    <color name="color_ff7474">#ff7474</color>
+    <color name="color_6082ff">#6082ff</color>
+    <color name="color_00ced9">#00ced9</color>
+    <color name="color_ff9c00">#ff9c00</color>
+    <color name="color_58cc97">#58cc97</color>
+    <color name="color_daefff">#daefff</color>
+    <color name="color_cc13c0c9">#cc13c0c9</color>
+    <color name="color_d0edff">#d0edff</color>
+    <color name="color_e6ffeec9">#e6ffeec9</color>
+    <color name="color_ccff9c00">#ccff9c00</color>
+    <!--刷新颜色-->
+    <color name="color_ff8800">#ff8800</color>
+    <color name="color_0099cc">#0099cc</color>
+    <color name="color_669900">#669900</color>
+    <!--无内容时的背景色-->
+    <color name="no_content_bg">#e6e6e6</color>
+    <color name="common_bg">#f7f7f7</color>
+    <!--列表背景色-->
+    <color name="listview_bg">#e6e6e6</color>
+    <!--界面背景色-->
+    <color name="ui_bg">#eeeeee</color>
+
+    <!--按钮可点击蓝色-->
+    <color name="btn_text_blue_focus">#007ed2</color>
+    <color name="btn_text_blue_normal">#aaaaaa</color>
+
+    <!--首页颜色-->
+    <color name="color_007ed2">#007ed2</color>
+
+    <!--标题栏颜色-->
+    <color name="title_text_color">#333333</color>
+    <color name="title_text_color_sub">#666666</color>
+
+</resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg"
+    android:orientation="vertical"
+    tools:context="com.salesman.activity.work.VisitPlanActivity">
+
+    <include layout="@layout/common_title" />
+
+    <include layout="@layout/item_visit_plan" />
+
+    <TextView
+        style="@style/Text_aaa_28"
+        android:paddingBottom="@dimen/common_margin_20"
+        android:paddingLeft="@dimen/common_margin"
+        android:paddingRight="@dimen/common_margin"
+        android:paddingTop="@dimen/common_margin_20"
+        android:text="拜访路线安排"
+        android:textColor="@color/color_666666" />
+
+    <com.studio.jframework.widget.listview.InnerListView
+        android:id="@+id/lv_visit_week_plan"
+        style="@style/InnerListView_Style"
+        android:divider="@color/no_content_bg"
+        android:dividerHeight="@dimen/margin_1" />
+
+</LinearLayout>

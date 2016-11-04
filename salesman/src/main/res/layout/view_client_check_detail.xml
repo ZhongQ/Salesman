@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/margin_120"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/common_margin"
+    android:paddingRight="@dimen/common_margin">
+
+    <com.salesman.views.CircleHeadView
+        android:id="@+id/hv_check"
+        style="@style/CircleHeadView_Style_80"
+        app:circle_src="@drawable/shop_icon"
+        app:shape="rectangle" />
+
+    <TextView
+        android:id="@+id/tv_name_client"
+        style="@style/Text_333_32"
+        android:layout_marginLeft="@dimen/margin_20"
+        android:ellipsize="end"
+        android:singleLine="true"
+        tools:text="美宜佳便利店" />
+
+</LinearLayout>

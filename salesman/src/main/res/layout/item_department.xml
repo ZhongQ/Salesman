@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_90"
+        android:background="@drawable/button_ripple">
+
+        <TextView
+            android:id="@+id/tv_name_dep"
+            style="@style/Text_009_32"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_24"
+            tools:text="深圳大区" />
+
+        <TextView
+            android:id="@+id/tv_dep_renshu"
+            style="@style/Text_009_24"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/common_margin"
+            android:drawablePadding="@dimen/common_margin_20"
+            android:drawableRight="@drawable/arrow_right_blue"
+            tools:text="18" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_line_dept"
+        style="@style/SplitLine_ImageView" />
+
+</LinearLayout>

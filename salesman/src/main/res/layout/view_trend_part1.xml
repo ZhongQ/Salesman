@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/Text_009_24"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_80"
+        android:drawableLeft="@drawable/biaotou_blue"
+        android:drawablePadding="@dimen/margin_12"
+        android:gravity="center_vertical"
+        android:text="近30天业绩趋势" />
+
+    <ImageView style="@style/SplitLine_ImageView" />
+
+    <TextView
+        style="@style/Text_666_20"
+        android:layout_gravity="right"
+        android:layout_marginRight="@dimen/margin_24"
+        android:layout_marginTop="@dimen/margin_30"
+        android:drawableLeft="@drawable/yellow_line"
+        android:drawablePadding="@dimen/margin_20"
+        android:gravity="center_vertical"
+        android:text="店宝" />
+
+    <TextView
+        style="@style/Text_666_20"
+        android:layout_gravity="right"
+        android:layout_marginRight="@dimen/margin_24"
+        android:layout_marginTop="@dimen/margin_20"
+        android:drawableLeft="@drawable/blue_line"
+        android:drawablePadding="@dimen/margin_20"
+        android:gravity="center_vertical"
+        android:text="自营" />
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/line_chart"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_400" />
+
+    <ImageView style="@style/SplitLine_ImageView" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_156"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <com.salesman.views.textview.BrandTextView
+                    android:id="@+id/tv_dianbao_deal"
+                    style="@style/Text_Black_36"
+                    android:maxLines="1"
+                    android:text="0"
+                    android:textColor="@color/color_ff9a20"
+                    android:textSize="@dimen/size_48" />
+
+                <TextView
+                    style="@style/Text_Black_28"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:text="店宝交易额"
+                    android:textColor="@color/color_ff9a20" />
+
+            </LinearLayout>
+        </FrameLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/line_vertical_short2" />
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <com.salesman.views.textview.BrandTextView
+                    android:id="@+id/tv_ziying_deal"
+                    style="@style/Text_Black_36"
+                    android:maxLines="1"
+                    android:text="0"
+                    android:textColor="@color/color_13c0c9"
+                    android:textSize="@dimen/size_48" />
+
+                <TextView
+                    style="@style/Text_Black_28"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:text="自营交易额"
+                    android:textColor="@color/color_13c0c9" />
+
+            </LinearLayout>
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <ImageView style="@style/SplitLine_ImageView" />
+</LinearLayout>

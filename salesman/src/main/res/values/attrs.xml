@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="NumberPicker">
+        <attr name="normalTextColor" format="color" />
+        <attr name="normalTextSize" format="dimension" />
+        <attr name="selecredTextColor" format="color" />
+        <attr name="selecredTextSize" format="dimension" />
+        <attr name="unitHight" format="dimension" />
+        <attr name="itemNumber" format="integer" />
+        <attr name="lineColor" format="color" />
+        <attr name="maskHight" format="dimension" />
+        <attr name="noEmpty" format="boolean" />
+        <attr name="isEnable" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="ArcProgressBar">
+        <attr name="progressbar_width" format="dimension" />
+        <attr name="progressbar_color" format="color" />
+        <attr name="title_text" format="string" />
+        <attr name="text_size" format="dimension" />
+        <attr name="text_color" format="color" />
+        <attr name="progressbar_unreached_color" format="color" />
+        <attr name="max_value" format="integer" />
+        <attr name="text_unit" format="string" />
+        <attr name="progress_num_size" format="dimension" />
+        <attr name="progress_num_color" format="color" />
+        <attr name="max_progressbar_angle" format="integer" />
+        <attr name="show_arrow" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="CircleHeadView">
+        <attr name="shape" format="enum">
+            <enum name="round" value="0" />
+            <enum name="rectangle" value="1" />
+        </attr>
+        <attr name="circle_color" format="color" />
+        <attr name="text_size_cir" format="dimension" />
+        <attr name="text_color_cir" format="color" />
+        <attr name="text_content" format="string" />
+        <!-- 圆角矩形角度-->
+        <attr name="circle_angle" format="float" />
+        <!--中心图形-->
+        <attr name="circle_src" format="reference" />
+    </declare-styleable>
+
+    <!-- 末行对齐方式 -->
+    <declare-styleable name="AlignTextView">
+        <attr name="align" format="enum">
+            <enum name="left" value="0" />
+            <enum name="center" value="1" />
+            <enum name="right" value="2" />
+        </attr>
+    </declare-styleable>
+
+    <!-- 标点转换 -->
+    <declare-styleable name="CBAlignTextView">
+        <attr name="punctuationConvert" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomButton">
+        <attr name="btn_color" format="color" />
+        <attr name="btn_text" format="string" />
+        <attr name="btn_text_size" format="dimension" />
+        <attr name="btn_angle" format="float" />
+    </declare-styleable>
+</resources>

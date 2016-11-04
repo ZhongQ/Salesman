@@ -1,0 +1,21 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.salesman.fragment.guide.ClientGuideFragment">
+
+    <include
+        android:id="@+id/yeji_guide1"
+        layout="@layout/view_yeji_guide1" />
+
+    <include
+        android:id="@+id/yeji_guide2"
+        layout="@layout/view_yeji_guide2"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/yeji_guide3"
+        layout="@layout/view_yeji_guide3"
+        android:visibility="gone" />
+
+</FrameLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <com.salesman.views.CircleHeadView
+        android:id="@+id/cir_head_daily_comment"
+        style="@style/CircleHeadView_Style_60"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_marginTop="@dimen/margin_10" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10">
+
+            <TextView
+                android:id="@+id/tv_name_comment"
+                style="@style/Text_Black_28"
+                android:layout_alignParentLeft="true"
+                android:text="小鱼"
+                android:textColor="@color/color_007ed2" />
+
+            <TextView
+                android:id="@+id/tv_time_comment"
+                style="@style/Text_ccc_24"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/common_margin"
+                android:text="03-29 18:33" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_content_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/common_margin"
+            android:layout_marginRight="@dimen/common_margin"
+            android:layout_marginTop="@dimen/common_margin"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size_32"
+            tools:text="太给力了，我饿了。" />
+
+        <ImageView
+            android:id="@+id/iv_line_daily_comment"
+            style="@style/SplitLine_ImageView" />
+    </LinearLayout>
+</LinearLayout>

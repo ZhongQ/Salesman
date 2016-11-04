@@ -1,0 +1,15 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.salesman.fragment.guide.ClientGuideFragment">
+
+    <include
+        android:id="@+id/client_guide1_m"
+        layout="@layout/view_client_guide1_m" />
+
+    <include
+        android:id="@+id/client_guide2_m"
+        layout="@layout/view_client_guide2_m"
+        android:visibility="gone" />
+</FrameLayout>

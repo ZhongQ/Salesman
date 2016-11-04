@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/no_content_bg"
+    android:orientation="vertical"
+    tools:context="com.salesman.activity.home.OutsideSignInActivity">
+
+    <include layout="@layout/common_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/common_margin">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_92"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Text_Black_32"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="时间：" />
+
+            <TextView
+                android:id="@+id/tv_time_outside"
+                style="@style/Text_Black_32"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                tools:text="2016年1月25日16:36:56" />
+        </LinearLayout>
+
+        <ImageView style="@style/SplitLine_ImageView" />
+
+        <LinearLayout
+            android:id="@+id/lay_address_outside"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_92"
+            android:background="@drawable/button_ripple"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Text_Black_32"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="地址：" />
+
+            <TextView
+                android:id="@+id/tv_address_outside"
+                style="@style/Text_Black_32"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:drawableRight="@drawable/arrow_right_grey"
+                android:paddingRight="@dimen/margin_20"
+                android:singleLine="true"
+                tools:text="武汉大学研究院武汉大学研究院武汉大学研究院" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView style="@style/SplitStrip_20" />
+
+    <LinearLayout
+        android:id="@+id/lay_line_client"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_92"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/common_margin">
+
+            <TextView
+                style="@style/Text_Black_32"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_10"
+                android:text="拜访线路：" />
+
+            <TextView
+                android:id="@+id/tv_line_outside"
+                style="@style/Text_Black_32"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawableRight="@drawable/arrow_right_grey"
+                android:gravity="center_vertical"
+                android:paddingRight="@dimen/margin_20"
+                android:singleLine="true"
+                android:text="@string/must_choose_please" />
+        </LinearLayout>
+
+        <ImageView style="@style/SplitLine_ImageView" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_92"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/common_margin">
+
+            <TextView
+                style="@style/Text_Black_32"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_10"
+                android:text="拜访客户：" />
+
+            <TextView
+                android:id="@+id/tv_client_outside"
+                style="@style/Text_Black_32"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawableRight="@drawable/arrow_right_grey"
+                android:gravity="center_vertical"
+                android:paddingRight="@dimen/margin_20"
+                android:singleLine="true"
+                android:text="@string/must_choose_please" />
+        </LinearLayout>
+
+        <ImageView style="@style/SplitStrip_20" />
+
+        <RadioGroup
+            android:id="@+id/rg_outside_type"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_90"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <RadioButton
+                android:id="@+id/rb_enter"
+                style="@style/RadioButton_Style"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="进店" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:id="@+id/rb_leave"
+                style="@style/RadioButton_Style"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="离店" />
+        </RadioGroup>
+
+        <ImageView style="@style/SplitLine_ImageView" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/et_remark_outside"
+        style="@style/SigninEditText"
+        android:layout_height="@dimen/margin_300"
+        android:hint="@string/hint_signin"
+        android:paddingBottom="@dimen/margin_35"
+        android:paddingLeft="@dimen/margin_40"
+        android:paddingRight="@dimen/margin_40"
+        android:paddingTop="@dimen/margin_35" />
+
+    <com.studio.jframework.widget.InnerGridView
+        android:id="@+id/gv_outside"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_30"
+        android:background="@color/white"
+        android:cacheColorHint="@color/transparent"
+        android:listSelector="@color/transparent"
+        android:numColumns="4"
+        android:paddingBottom="@dimen/margin_30"
+        android:paddingLeft="@dimen/margin_40"
+        android:paddingRight="@dimen/margin_40"
+        android:scrollbars="none"
+        android:verticalSpacing="@dimen/margin_40" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/transparent" />
+
+    <include layout="@layout/view_button" />
+</LinearLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_client_detail_bg"
+        style="@style/SplitStrip_20"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/margin_20"
+        android:paddingLeft="@dimen/common_margin"
+        android:paddingRight="@dimen/common_margin"
+        android:paddingTop="@dimen/margin_20">
+
+        <TextView
+            android:id="@+id/tv_key_client"
+            style="@style/Client_Text_New1"
+            android:layout_marginRight="@dimen/margin_10"
+            tools:text="商铺名称" />
+
+        <TextView
+            android:id="@+id/tv_value_client"
+            style="@style/Client_Text_New2"
+            tools:text="芙蓉兴盛便利店" />
+
+        <ImageView
+            style="@style/Client_Image"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_line_client_detail"
+        style="@style/Client_SplitLine" />
+
+</LinearLayout>

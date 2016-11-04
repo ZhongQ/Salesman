@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/lay_report_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_detail_daily"
+            style="@style/Text_Black_28"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="详情"
+            android:textColor="@color/color_007ed2" />
+
+        <ImageView
+            android:id="@+id/iv_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingBottom="@dimen/margin_10"
+            android:paddingLeft="@dimen/margin_40"
+            android:paddingTop="@dimen/margin_20"
+            android:src="@drawable/comment_daily" />
+    </RelativeLayout>
+</LinearLayout>

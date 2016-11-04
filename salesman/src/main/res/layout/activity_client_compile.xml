@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.salesman.activity.client.ClientCompileActivity">
+
+    <include layout="@layout/common_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/no_content_bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <include layout="@layout/layout_add_client_step1_part1" />
+
+            <ImageView style="@style/SplitStrip_20" />
+
+            <include
+                layout="@layout/layout_client_compile_part1"
+                android:visibility="gone" />
+
+            <include layout="@layout/layout_add_client_step2_part1" />
+
+            <include layout="@layout/layout_add_client_step2_part2" />
+
+            <com.studio.jframework.widget.InnerGridView
+                android:id="@+id/gv_client_compile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:cacheColorHint="@color/transparent"
+                android:listSelector="@color/transparent"
+                android:numColumns="4"
+                android:paddingBottom="@dimen/margin_30"
+                android:paddingLeft="@dimen/margin_40"
+                android:paddingRight="@dimen/margin_40"
+                android:paddingTop="@dimen/margin_30"
+                android:scrollbars="none"
+                android:verticalSpacing="@dimen/margin_40" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

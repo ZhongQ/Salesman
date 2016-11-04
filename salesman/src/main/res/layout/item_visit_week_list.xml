@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/margin_35dp"
+    android:background="@drawable/button_ripple"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/margin_17dp"
+    android:paddingRight="@dimen/margin_17dp">
+
+    <TextView
+        android:id="@+id/tv_week_plan"
+        style="@style/Text_666_12sp"
+        android:layout_width="@dimen/margin_0dp"
+        android:layout_weight="1"
+        tools:text="周一" />
+
+    <TextView
+        android:id="@+id/tv_line_name_plan"
+        style="@style/Text_666_12sp"
+        android:layout_width="@dimen/margin_0dp"
+        android:layout_weight="1"
+        android:maxLines="1"
+        tools:text="1号线" />
+
+    <TextView
+        android:id="@+id/tv_client_num_plan"
+        style="@style/Text_666_12sp"
+        android:layout_width="@dimen/margin_0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        tools:text="55家" />
+
+    <TextView
+        android:id="@+id/tv_visit_num_plan"
+        style="@style/Text_666_12sp"
+        android:layout_width="@dimen/margin_0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        tools:text="49" />
+
+    <TextView
+        android:id="@+id/tv_status_plan"
+        style="@style/Text_666_12sp"
+        android:layout_width="@dimen/margin_0dp"
+        android:layout_weight="1"
+        android:drawablePadding="@dimen/margin_5dp"
+        android:drawableRight="@drawable/arrow_right_grey"
+        android:gravity="end"
+        android:textColor="@color/color_ffb644"
+        tools:text="已完成" />
+</LinearLayout>

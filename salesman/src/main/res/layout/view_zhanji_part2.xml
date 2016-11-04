@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_f3f3f3"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <com.salesman.views.ArcProgressBar
+        android:id="@+id/progressbar_dianbao"
+        android:layout_width="@dimen/margin_380"
+        android:layout_height="@dimen/margin_380"
+        custom:max_progressbar_angle="300"
+        custom:progress_num_color="@color/color_ea3200"
+        custom:progress_num_size="@dimen/size_30sp"
+        custom:progressbar_color="@color/color_35acfb"
+        custom:progressbar_unreached_color="@color/color_fec955"
+        custom:progressbar_width="15dp"
+        custom:text_color="@color/color_333333"
+        custom:text_size="12sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/Text_Black_32"
+                    android:drawableLeft="@drawable/already_visit"
+                    android:drawablePadding="@dimen/margin_10"
+                    android:gravity="bottom"
+                    android:text="@string/already_visit"
+                    android:textColor="@color/color_333333" />
+
+                <ImageView
+                    style="@style/SplitLine_ImageView"
+                    android:layout_marginTop="@dimen/margin_6"
+                    android:src="@drawable/line_split_zhanji" />
+
+                <TextView
+                    android:id="@+id/tv_visit_dianbao"
+                    style="@style/Text_Black_28"
+                    android:textColor="@color/color_35acfb"
+                    tools:text="300003000030000" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_66"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/Text_Black_32"
+                    android:drawableLeft="@drawable/no_visit"
+                    android:drawablePadding="@dimen/margin_10"
+                    android:gravity="bottom"
+                    android:text="@string/no_visit"
+                    android:textColor="@color/color_333333" />
+
+                <ImageView
+                    style="@style/SplitLine_ImageView"
+                    android:layout_marginTop="@dimen/margin_6"
+                    android:src="@drawable/line_split_zhanji" />
+
+                <TextView
+                    android:id="@+id/tv_no_visit_dianbao"
+                    style="@style/Text_Black_28"
+                    android:textColor="@color/color_fec955"
+                    tools:text="15" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+    <com.salesman.views.ArcProgressBar
+        android:id="@+id/progressbar_lianhe"
+        android:layout_width="@dimen/margin_380"
+        android:layout_height="@dimen/margin_380"
+        android:layout_marginTop="@dimen/margin_60"
+        custom:max_progressbar_angle="300"
+        custom:progress_num_color="@color/color_ea3200"
+        custom:progress_num_size="@dimen/size_30sp"
+        custom:progressbar_color="@color/color_35acfb"
+        custom:progressbar_unreached_color="@color/color_fec955"
+        custom:progressbar_width="15dp"
+        custom:text_color="@color/color_333333"
+        custom:text_size="12sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/Text_Black_32"
+                    android:drawableLeft="@drawable/already_visit"
+                    android:drawablePadding="@dimen/margin_10"
+                    android:gravity="bottom"
+                    android:text="@string/already_visit"
+                    android:textColor="@color/color_333333" />
+
+                <ImageView
+                    style="@style/SplitLine_ImageView"
+                    android:layout_marginTop="@dimen/margin_6"
+                    android:src="@drawable/line_split_zhanji" />
+
+                <TextView
+                    android:id="@+id/tv_visit_lianhe"
+                    style="@style/Text_Black_28"
+                    android:textColor="@color/color_35acfb"
+                    tools:text="0" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_66"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginBottom="@dimen/margin_20"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/Text_Black_32"
+                    android:drawableLeft="@drawable/no_visit"
+                    android:drawablePadding="@dimen/margin_10"
+                    android:gravity="bottom"
+                    android:text="@string/no_visit"
+                    android:textColor="@color/color_333333" />
+
+                <ImageView
+                    style="@style/SplitLine_ImageView"
+                    android:layout_marginTop="@dimen/margin_6"
+                    android:src="@drawable/line_split_zhanji" />
+
+                <TextView
+                    android:id="@+id/tv_no_visit_lianhe"
+                    style="@style/Text_Black_28"
+                    android:textColor="@color/color_fec955"
+                    tools:text="151561515615156" />
+            </LinearLayout>
+        </FrameLayout>
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/margin_78"
+    android:background="@color/white">
+
+    <ImageView
+        style="@style/SplitLine_ImageView"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/line_divide_deep_grey" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/margin_12"
+        android:background="@color/transparent"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/common_margin"
+        android:paddingRight="@dimen/common_margin">
+
+        <FrameLayout
+            android:id="@+id/lay_filtrate1"
+            style="@style/Client_Filtrate_Lay_Style_PX"
+            android:layout_marginRight="@dimen/margin_12">
+
+            <ImageView
+                android:id="@+id/iv_filtrate1"
+                style="@style/Client_Filtrate_ImageView_Style" />
+
+            <TextView
+                android:id="@+id/tv_filtrate1"
+                style="@style/Client_Filtrate_Text_Style_PX"
+                android:text="@string/all_subordinate" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/lay_filtrate2"
+            style="@style/Client_Filtrate_Lay_Style_PX"
+            android:layout_marginRight="@dimen/margin_12">
+
+            <ImageView
+                android:id="@+id/iv_filtrate2"
+                style="@style/Client_Filtrate_ImageView_Style" />
+
+            <TextView
+                android:id="@+id/tv_filtrate2"
+                style="@style/Client_Filtrate_Text_Style_PX"
+                android:text="@string/all_line" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/lay_filtrate3"
+            style="@style/Client_Filtrate_Lay_Style_PX"
+            android:layout_marginRight="@dimen/margin_12">
+
+            <ImageView
+                android:id="@+id/iv_filtrate3"
+                style="@style/Client_Filtrate_ImageView_Style" />
+
+            <TextView
+                android:id="@+id/tv_filtrate3"
+                style="@style/Client_Filtrate_Text_Style_PX"
+                android:text="店铺类型" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/lay_filtrate4"
+            style="@style/Client_Filtrate_Lay_Style_PX"
+            android:layout_marginRight="@dimen/margin_12"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_filtrate4"
+                style="@style/Client_Filtrate_ImageView_Style" />
+
+            <TextView
+                android:id="@+id/tv_filtrate4"
+                style="@style/Client_Filtrate_Text_Style_PX"
+                android:text="是否注册" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/lay_filtrate5"
+            style="@style/Client_Filtrate_Lay_Style_PX">
+
+            <ImageView
+                android:id="@+id/iv_filtrate5"
+                style="@style/Client_Filtrate_ImageView_Style" />
+
+            <TextView
+                android:id="@+id/tv_filtrate5"
+                style="@style/Client_Filtrate_Text_Style_PX"
+                android:text="重点客户" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lay_log_app"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/button_ripple"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_90"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_personal_item"
+            android:layout_width="@dimen/margin_80"
+            android:layout_height="@dimen/margin_90"
+            android:scaleType="center"
+            android:src="@drawable/setting_msgs_icon" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_90"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:paddingRight="@dimen/common_margin">
+
+                <TextView
+                    android:id="@+id/tv_personal_list"
+                    style="@style/Text_Black_32"
+                    android:layout_width="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:drawableRight="@drawable/arrow_right_grey"
+                    android:text="app日志" />
+
+                <TextView
+                    android:id="@+id/tv_red_dot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_30"
+                    android:drawablePadding="@dimen/margin_8"
+                    android:drawableRight="@drawable/red_dot_bg"
+                    android:text="NEW"
+                    android:textColor="@color/color_aaaaaa"
+                    android:textSize="@dimen/size_24"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/view_personal_line"
+                style="@style/SplitLine_ImageView" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

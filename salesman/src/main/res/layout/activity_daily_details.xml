@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.salesman.activity.home.DailyDetailsActivity">
+
+    <include layout="@layout/common_title" />
+
+    <TextView
+        android:id="@+id/tv_log_name"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_70"
+        android:background="@color/color_7896a4"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/common_margin"
+        android:paddingRight="@dimen/common_margin"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size_32"
+        android:visibility="gone"
+        tools:text="地推专员日报" />
+
+    <ScrollView
+        android:id="@+id/scroll_daily_detail"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/common_bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <include layout="@layout/view_daily" />
+
+            <ImageView style="@style/SplitLine_ImageView" />
+
+            <com.studio.jframework.widget.listview.InnerListView
+                android:id="@+id/lv_daily_details"
+                style="@style/InnerListView_Style" />
+
+            <!--<ImageView style="@style/SplitLine_ImageView" />-->
+
+            <TextView
+                android:id="@+id/tv_remark_daily"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/common_margin"
+                android:paddingLeft="@dimen/margin_40"
+                android:paddingRight="@dimen/margin_40"
+                android:paddingTop="@dimen/common_margin"
+                android:textColor="@color/black"
+                android:textSize="@dimen/size_32"
+                tools:text="备注" />
+
+            <com.studio.jframework.widget.InnerGridView
+                android:id="@+id/gv_daily_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:cacheColorHint="@color/transparent"
+                android:listSelector="@color/transparent"
+                android:numColumns="4"
+                android:paddingBottom="@dimen/margin_30"
+                android:paddingLeft="@dimen/margin_40"
+                android:paddingRight="@dimen/margin_40"
+                android:paddingTop="@dimen/margin_30"
+                android:scrollbars="none"
+                android:verticalSpacing="@dimen/margin_40"
+                android:visibility="visible" />
+
+            <View style="@style/SplitStrip_20" />
+
+            <TextView
+                android:id="@+id/tv_comment_haed"
+                style="@style/Text_ccc_24"
+                android:layout_width="match_parent"
+                android:gravity="center_vertical"
+                android:paddingBottom="@dimen/common_margin_20"
+                android:paddingLeft="@dimen/common_margin"
+                android:paddingRight="@dimen/common_margin"
+                android:paddingTop="@dimen/common_margin_20" />
+
+            <com.studio.jframework.widget.listview.InnerListView
+                android:id="@+id/lv_comment_daily"
+                style="@style/InnerListView_Style" />
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/view_comment_bar" />
+</LinearLayout>

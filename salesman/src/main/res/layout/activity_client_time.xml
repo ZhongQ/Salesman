@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/no_content_bg"
+    android:orientation="vertical"
+    tools:context="com.salesman.activity.client.ClientTimeActivity">
+
+    <include layout="@layout/common_title" />
+
+    <LinearLayout
+        android:id="@+id/lay_open_store"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_80"
+        android:layout_marginTop="@dimen/margin_20"
+        android:background="@drawable/button_ripple"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/common_margin"
+        android:paddingRight="@dimen/common_margin">
+
+        <TextView
+            style="@style/Text_Black_28"
+            android:text="开店时间：" />
+
+        <TextView
+            android:id="@+id/tv_open_time"
+            style="@style/Text_Black_28"
+            android:layout_marginLeft="@dimen/margin_8"
+            android:text="@string/select_please" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lay_close_store"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_80"
+        android:layout_marginTop="@dimen/margin_20"
+        android:background="@drawable/button_ripple"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/common_margin"
+        android:paddingRight="@dimen/common_margin">
+
+        <TextView
+            style="@style/Text_Black_28"
+            android:text="关店时间：" />
+
+        <TextView
+            android:id="@+id/tv_close_time"
+            style="@style/Text_Black_28"
+            android:layout_marginLeft="@dimen/margin_8"
+            android:text="@string/select_please" />
+
+    </LinearLayout>
+</LinearLayout>

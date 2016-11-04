@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/common_margin_20"
+        android:paddingLeft="@dimen/common_margin"
+        android:paddingTop="@dimen/common_margin_20">
+
+        <com.salesman.views.CircleHeadView
+            android:id="@+id/cir_head_visit"
+            style="@style/CircleHeadView_Style_80" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_margin_20">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_name_salesman"
+                    style="@style/Text_Black_28"
+                    android:text="业务员" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/Text_666_24"
+                        android:text="拜访路线：" />
+
+                    <TextView
+                        android:id="@+id/tv_name_line"
+                        style="@style/Text_666_24"
+                        android:layout_marginLeft="@dimen/margin_40"
+                        android:singleLine="true"
+                        android:text="1号线" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/Text_666_24"
+                        android:text="当日拜访：" />
+
+                    <TextView
+                        android:id="@+id/tv_num_visit"
+                        style="@style/Text_666_24"
+                        android:layout_marginLeft="@dimen/margin_40"
+                        android:text="28" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_state_visit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/completed_icon" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <ImageView style="@style/SplitLine_ImageView" />
+</LinearLayout>

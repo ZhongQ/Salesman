@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/margin_100">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.salesman.views.CircleHeadView
+            android:id="@+id/hv_head_round"
+            style="@style/CircleHeadView_Style_70"
+            android:layout_marginLeft="@dimen/margin_20"
+            app:shape="round"
+            app:text_color_cir="@color/white"
+            app:text_content="花名"
+            app:text_size_cir="@dimen/size_14sp" />
+
+        <TextView
+            android:id="@+id/tv_huaming"
+            style="@style/Text_333_32"
+            android:layout_width="@dimen/margin_0dp"
+            android:layout_marginLeft="@dimen/margin_20"
+            android:layout_weight="1"
+            android:text="花名" />
+
+        <ImageView
+            android:id="@+id/iv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/completed_icon"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <ImageView
+        style="@style/SplitLine_ImageView"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

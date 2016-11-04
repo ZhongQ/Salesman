@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/zhanji_blue_bg"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_100">
+
+            <TextView
+                android:id="@+id/tv_yeji_trend"
+                style="@style/Text_fff_30"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/common_margin"
+                android:text="业绩趋势" />
+
+            <TextView
+                android:id="@+id/tv_order_detail"
+                style="@style/Text_fff_30"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:paddingRight="@dimen/common_margin"
+                android:text="订单明细" />
+
+            <TextView
+                style="@style/Text_fff_36"
+                android:layout_centerInParent="true"
+                android:text="今日战绩" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_70"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <com.salesman.views.textview.BrandTextView
+                        android:id="@+id/tv_dianbao_deal"
+                        style="@style/Text_fff_36"
+                        android:maxLines="1"
+                        android:text="0"
+                        android:textSize="@dimen/size_72" />
+
+                    <TextView
+                        style="@style/Text_fff_28"
+                        android:layout_marginTop="@dimen/margin_8"
+                        android:text="店宝交易" />
+
+                </LinearLayout>
+            </FrameLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/line_blue_short_vertical" />
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <com.salesman.views.textview.BrandTextView
+                        android:id="@+id/tv_ziying_deal"
+                        style="@style/Text_fff_36"
+                        android:maxLines="1"
+                        android:text="0"
+                        android:textSize="@dimen/size_72" />
+
+                    <TextView
+                        style="@style/Text_fff_28"
+                        android:layout_marginTop="@dimen/margin_8"
+                        android:text="@string/zhuanjiao_ziying" />
+
+                </LinearLayout>
+            </FrameLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_100"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="@dimen/margin_0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.salesman.views.textview.BrandTextView
+                android:id="@+id/tv_num_order"
+                style="@style/Text_007_32"
+                android:text="0" />
+
+            <TextView
+                style="@style/Text_999_24"
+                android:layout_marginTop="@dimen/margin_5"
+                android:text="订单数" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/line_grey_short_vertical" />
+
+        <LinearLayout
+            android:layout_width="@dimen/margin_0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.salesman.views.textview.BrandTextView
+                android:id="@+id/tv_active_client"
+                style="@style/Text_007_32"
+                android:text="0" />
+
+            <TextView
+                style="@style/Text_999_24"
+                android:layout_marginTop="@dimen/margin_5"
+                android:text="活跃客户" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/line_grey_short_vertical" />
+
+        <LinearLayout
+            android:layout_width="@dimen/margin_0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.salesman.views.textview.BrandTextView
+                android:id="@+id/tv_new_client"
+                style="@style/Text_007_32"
+                android:text="0" />
+
+            <TextView
+                style="@style/Text_999_24"
+                android:layout_marginTop="@dimen/margin_5"
+                android:text="新增客户" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView style="@style/SplitLine_ImageView" />
+
+    <ImageView style="@style/SplitStrip_20" />
+
+    <include layout="@layout/view_zhanji_second_part" />
+
+    <ImageView style="@style/SplitLine_ImageView" />
+</LinearLayout>

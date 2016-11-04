@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Layout_Base_Style"
+    tools:context="com.salesman.activity.home.DailyTemplateActivity">
+
+    <include layout="@layout/common_title" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview_daily"
+        style="@style/RecyclerView_BaseStyle" />
+</LinearLayout>

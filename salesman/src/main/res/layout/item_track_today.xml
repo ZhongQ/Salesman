@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_date_track"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_80"
+        android:background="@color/dark_grey_bg"
+        android:gravity="center"
+        android:text="2016-2-23 星期二"
+        android:textColor="@color/grey_black"
+        android:textSize="@dimen/size_24"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_line_bg_signin"
+        style="@style/SplitStrip_20"
+        android:visibility="gone" />
+
+    <include layout="@layout/view_signin_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_150"
+        android:background="@drawable/button_ripple"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/common_margin"
+        android:paddingRight="@dimen/common_margin">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_30"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Text_Black_28"
+                android:drawableLeft="@drawable/location_address"
+                android:drawablePadding="@dimen/margin_20"
+                android:text="最新位置：" />
+
+            <TextView
+                android:id="@+id/tv_address_now"
+                style="@style/Text_Black_28"
+                android:layout_width="match_parent"
+                android:drawableRight="@drawable/arrow_right_grey"
+                android:singleLine="true"
+                android:text="深圳市南山区桃园路12号" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_20"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Text_Black_28"
+                android:drawableLeft="@drawable/time_icon"
+                android:drawablePadding="@dimen/margin_20"
+                android:text="更新时间："
+                android:textColor="@color/little_grey_txt" />
+
+            <TextView
+                android:id="@+id/tv_updata_time"
+                style="@style/Text_Black_28"
+                android:singleLine="true"
+                android:text="16:50:10"
+                android:textColor="@color/little_grey_txt" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/button_ripple"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_popup_client"
+        style="@style/Text_Black_32"
+        android:layout_width="match_parent"
+        android:padding="@dimen/common_margin"
+        android:singleLine="true"
+        tools:text="全部定格" />
+</LinearLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/margin_14"
+    android:paddingLeft="@dimen/common_margin"
+    android:paddingRight="@dimen/common_margin"
+    android:paddingTop="@dimen/margin_14">
+
+    <com.salesman.views.CircleHeadView
+        android:id="@+id/cir_head_daily_detail"
+        style="@style/CircleHeadView_Style_90"
+        app:text_size_cir="@dimen/size_14sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_margin_20"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_name_full"
+                style="@style/Text_Black_32"
+                android:layout_width="@dimen/margin_0dp"
+                android:layout_weight="1"
+                tools:text="李坏" />
+
+            <TextView
+                android:id="@+id/tv_type_log"
+                style="@style/Text_007_24"
+                tools:text="专员日报" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_dept_post"
+                style="@style/Text_666_24"
+                android:layout_width="@dimen/margin_0dp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:singleLine="true"
+                tools:text="技术部 安卓开发" />
+
+            <TextView
+                android:id="@+id/tv_time_daily"
+                style="@style/Text_666_24"
+                tools:text="08-18 11:32:08" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

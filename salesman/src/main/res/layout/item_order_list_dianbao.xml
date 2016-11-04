@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/common_margin">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/margin_14"
+        android:paddingTop="@dimen/margin_14">
+
+        <include layout="@layout/view_head_icon2" />
+
+        <TextView
+            android:id="@+id/tv_name_store"
+            style="@style/Text_Black_32"
+            android:layout_marginLeft="@dimen/common_margin"
+            android:text="芙蓉兴盛便利店"
+            android:textColor="@color/color_333333" />
+    </LinearLayout>
+
+    <ImageView style="@style/SplitLine_ImageView" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/common_margin"
+        android:paddingRight="@dimen/common_margin"
+        android:paddingTop="@dimen/common_margin">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Text_Black_28"
+                android:text="手机号码："
+                android:textColor="@color/color_666666" />
+
+            <TextView
+                android:id="@+id/tv_mobile"
+                style="@style/Text_Black_28"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:singleLine="true"
+                android:text="13688886666"
+                android:textColor="@color/color_333333" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Text_Black_28"
+                android:alpha="0.8"
+                android:text="下单时间："
+                android:textColor="@color/color_666666" />
+
+            <TextView
+                android:id="@+id/tv_time_order"
+                style="@style/Text_Black_28"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:singleLine="true"
+                android:text="13688886666"
+                android:textColor="@color/color_333333" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Text_Black_28"
+                android:alpha="0.8"
+                android:text="订单编号："
+                android:textColor="@color/color_666666" />
+
+            <TextView
+                android:id="@+id/tv_no_order"
+                style="@style/Text_Black_28"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:singleLine="true"
+                android:text="13688886666"
+                android:textColor="@color/color_333333" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Text_Black_28"
+                android:alpha="0.8"
+                android:text="订单金额："
+                android:textColor="@color/color_666666" />
+
+            <TextView
+                android:id="@+id/tv_money_order"
+                style="@style/Text_Black_28"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:singleLine="true"
+                android:text="13688886666"
+                android:textColor="@color/color_333333" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Text_Black_28"
+                android:alpha="0.8"
+                android:text="订单状态："
+                android:textColor="@color/color_666666" />
+
+            <TextView
+                android:id="@+id/tv_state_order"
+                style="@style/Text_Black_28"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:singleLine="true"
+                android:text="13688886666"
+                android:textColor="@color/color_333333" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

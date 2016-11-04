@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout style="@style/Client_Layout">
+
+        <TextView
+            style="@style/Client_Text1"
+            android:text="营业面积" />
+
+        <EditText
+            android:id="@+id/et_mianji"
+            style="@style/ClientEditText"
+            android:hint="请输入面积（㎡）"
+            android:inputType="number"
+            android:maxLength="5"
+            android:numeric="integer" />
+
+    </LinearLayout>
+
+    <ImageView style="@style/Client_SplitLine" />
+
+    <LinearLayout
+        android:id="@+id/lay_time"
+        style="@style/Client_Layout">
+
+        <TextView
+            style="@style/Client_Text1"
+            android:text="营业时间" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            style="@style/Client_Text2" />
+
+        <TextView style="@style/Client_Text3" />
+    </LinearLayout>
+
+    <ImageView style="@style/Client_SplitLine" />
+
+    <LinearLayout style="@style/Client_Layout">
+
+        <TextView
+            style="@style/Client_Text1"
+            android:text="人员数量" />
+
+        <EditText
+            android:id="@+id/et_renshu"
+            style="@style/ClientEditText"
+            android:hint="请输入人员数量"
+            android:inputType="number"
+            android:maxLength="5"
+            android:numeric="integer" />
+    </LinearLayout>
+
+    <ImageView style="@style/Client_SplitLine" />
+
+    <LinearLayout style="@style/Client_Layout">
+
+        <TextView
+            style="@style/Client_Text1"
+            android:text="配送员数量" />
+
+        <EditText
+            android:id="@+id/et_peisong"
+            style="@style/ClientEditText"
+            android:hint="请输入配送员数量"
+            android:inputType="number"
+            android:maxLength="5"
+            android:numeric="integer" />
+    </LinearLayout>
+
+    <ImageView style="@style/Client_SplitLine" />
+
+    <LinearLayout style="@style/Client_Layout">
+
+        <TextView
+            style="@style/Client_Text1"
+            android:text="配送合作商" />
+
+        <EditText
+            android:id="@+id/et_peisongshang"
+            style="@style/ClientEditText"
+            android:hint="请输入配送合作商"
+            android:inputType="text"
+            android:maxLength="50" />
+
+    </LinearLayout>
+
+    <ImageView style="@style/Client_SplitLine" />
+
+    <LinearLayout
+        android:id="@+id/lay_zhuying"
+        style="@style/Client_Layout">
+
+        <TextView
+            style="@style/Client_Text1"
+            android:text="主营商品" />
+
+        <TextView
+            android:id="@+id/tv_zhuying"
+            style="@style/Client_Text2" />
+
+        <TextView style="@style/Client_Text3" />
+    </LinearLayout>
+
+    <ImageView style="@style/Client_SplitLine" />
+
+    <LinearLayout style="@style/Client_Layout">
+
+        <TextView
+            style="@style/Client_Text1"
+            android:text="主营销售占比" />
+
+        <EditText
+            android:id="@+id/et_zhanbi"
+            style="@style/ClientEditText"
+            android:hint="请输入销售占比（%）"
+            android:inputType="text"
+            android:maxLength="10" />
+    </LinearLayout>
+
+    <ImageView style="@style/Client_SplitLine" />
+
+    <LinearLayout style="@style/Client_Layout">
+
+        <TextView
+            style="@style/Client_Text1"
+            android:text="日均营业额" />
+
+        <EditText
+            android:id="@+id/et_yingyee"
+            style="@style/ClientEditText"
+            android:hint="请输入日均营业额（W）"
+            android:inputType="number"
+            android:maxLength="8"
+            android:numeric="integer" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_20"
+        android:background="@color/dark_grey_bg" />
+
+    <LinearLayout
+        android:id="@+id/lay_zhifu"
+        style="@style/Client_Layout">
+
+        <TextView
+            style="@style/Client_Text1"
+            android:text="支付平台" />
+
+        <TextView
+            android:id="@+id/tv_zhifu"
+            style="@style/Client_Text2" />
+
+        <TextView style="@style/Client_Text3" />
+    </LinearLayout>
+
+    <ImageView style="@style/Client_SplitLine" />
+
+    <LinearLayout style="@style/Client_Layout">
+
+        <TextView
+            style="@style/Client_Text1"
+            android:text="SKU数" />
+
+        <EditText
+            android:id="@+id/et_sku"
+            style="@style/ClientEditText"
+            android:hint="请输入SKU数"
+            android:inputType="number"
+            android:maxLength="8" />
+    </LinearLayout>
+
+    <ImageView style="@style/Client_SplitLine" />
+</LinearLayout>

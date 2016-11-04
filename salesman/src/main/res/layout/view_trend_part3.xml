@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/Text_009_24"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_80"
+        android:drawableLeft="@drawable/biaotou_blue"
+        android:drawablePadding="@dimen/margin_12"
+        android:gravity="center_vertical"
+        android:text="客户" />
+
+    <ImageView style="@style/SplitLine_ImageView" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="@dimen/margin_0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/Text_666_24"
+                android:layout_height="@dimen/margin_70"
+                android:drawableLeft="@drawable/newly_increased_client"
+                android:drawablePadding="@dimen/common_margin_20"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/margin_24"
+                android:text="新增客户" />
+
+            <ImageView style="@style/SplitLine_ImageView" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_60"
+                android:background="@color/color_f7f7f7"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/common_margin">
+
+                <TextView
+                    style="@style/Text_Black_24"
+                    android:text="今日"
+                    android:textColor="@color/color_ffb644" />
+
+                <ImageView style="@style/SplitLine_ImageView_Vertical" />
+
+                <TextView
+                    android:id="@+id/tv_today_add"
+                    style="@style/Text_999_36"
+                    android:text="0" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_60"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/common_margin">
+
+                <TextView
+                    style="@style/Text_Black_24"
+                    android:text="昨日"
+                    android:textColor="@color/color_ff7474" />
+
+                <ImageView style="@style/SplitLine_ImageView_Vertical" />
+
+                <TextView
+                    android:id="@+id/tv_yesterday_add"
+                    style="@style/Text_999_36"
+                    android:text="0" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_60"
+                android:background="@color/color_f7f7f7"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/common_margin">
+
+                <TextView
+                    style="@style/Text_Black_24"
+                    android:text="本月"
+                    android:textColor="@color/color_6082ff" />
+
+                <ImageView style="@style/SplitLine_ImageView_Vertical" />
+
+                <TextView
+                    android:id="@+id/tv_month_add"
+                    style="@style/Text_999_36"
+                    android:text="0" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_60"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/common_margin">
+
+                <TextView
+                    style="@style/Text_Black_24"
+                    android:text="上月"
+                    android:textColor="@color/color_00ced9" />
+
+                <ImageView style="@style/SplitLine_ImageView_Vertical" />
+
+                <TextView
+                    android:id="@+id/tv_last_month_add"
+                    style="@style/Text_999_36"
+                    android:text="0" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/line_vertical_3" />
+
+        <LinearLayout
+            android:layout_width="@dimen/margin_0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/Text_666_24"
+                android:layout_height="@dimen/margin_70"
+                android:drawableLeft="@drawable/active_client"
+                android:drawablePadding="@dimen/common_margin_20"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/margin_24"
+                android:text="活跃客户" />
+
+            <ImageView style="@style/SplitLine_ImageView" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_60"
+                android:background="@color/color_f7f7f7"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/common_margin">
+
+                <TextView
+                    style="@style/Text_Black_24"
+                    android:text="今日"
+                    android:textColor="@color/color_ffb644" />
+
+                <ImageView style="@style/SplitLine_ImageView_Vertical" />
+
+                <TextView
+                    android:id="@+id/tv_today_active"
+                    style="@style/Text_999_36"
+                    android:text="0" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_60"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/common_margin">
+
+                <TextView
+                    style="@style/Text_Black_24"
+                    android:text="昨日"
+                    android:textColor="@color/color_ff7474" />
+
+                <ImageView style="@style/SplitLine_ImageView_Vertical" />
+
+                <TextView
+                    android:id="@+id/tv_yesterday_active"
+                    style="@style/Text_999_36"
+                    android:text="0" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_60"
+                android:background="@color/color_f7f7f7"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/common_margin">
+
+                <TextView
+                    style="@style/Text_Black_24"
+                    android:text="本月"
+                    android:textColor="@color/color_6082ff" />
+
+                <ImageView style="@style/SplitLine_ImageView_Vertical" />
+
+                <TextView
+                    android:id="@+id/tv_month_active"
+                    style="@style/Text_999_36"
+                    android:text="0" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_60"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/common_margin">
+
+                <TextView
+                    style="@style/Text_Black_24"
+                    android:text="上月"
+                    android:textColor="@color/color_00ced9" />
+
+                <ImageView style="@style/SplitLine_ImageView_Vertical" />
+
+                <TextView
+                    android:id="@+id/tv_last_month_active"
+                    style="@style/Text_999_36"
+                    android:text="0" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView style="@style/SplitLine_ImageView" />
+</LinearLayout>

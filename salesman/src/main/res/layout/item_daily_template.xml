@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lay_template"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/margin_110dp"
+    android:background="@drawable/light_grey_selector"
+    android:gravity="center_horizontal|center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_tmpl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/daily_day" />
+
+    <TextView
+        android:id="@+id/tv_name_tmpl"
+        style="@style/Text_Black_28"
+        android:layout_marginTop="@dimen/margin_18dp"
+        android:gravity="center_horizontal"
+        android:maxEms="4"
+        android:singleLine="false"
+        tools:text="高级经理日报"
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/size_14sp" />
+</LinearLayout>

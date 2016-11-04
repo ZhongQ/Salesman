@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_f3f3f3"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/margin_20"
+    android:paddingTop="@dimen/margin_20">
+
+    <LinearLayout
+        android:id="@+id/lay_zhanji_bd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/common_margin"
+        android:paddingRight="@dimen/common_margin">
+
+        <TextView
+            style="@style/Text_aaa_28"
+            android:text="BD代表：" />
+
+        <TextView
+            android:id="@+id/tv_representative"
+            style="@style/Text_aaa_28"
+            android:layout_weight="1"
+            android:singleLine="true"
+            tools:text="李坏" />
+
+        <ImageView
+            android:layout_width="@dimen/margin_60"
+            android:layout_height="@dimen/margin_30"
+            android:layout_marginLeft="@dimen/margin_20"
+            android:background="@color/color_35acfb"
+            android:visibility="gone" />
+
+        <TextView
+            style="@style/Text_Black_28"
+            android:layout_marginLeft="@dimen/margin_20"
+            android:text="已拜访"
+            android:textColor="@color/color_333333"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_8"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/common_margin"
+        android:paddingRight="@dimen/common_margin">
+
+        <TextView
+            style="@style/Text_aaa_28"
+            android:text="时     间：" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            style="@style/Text_aaa_28"
+            android:layout_weight="1"
+            android:singleLine="true"
+            tools:text="2016-07-05" />
+
+        <ImageView
+            android:layout_width="@dimen/margin_60"
+            android:layout_height="@dimen/margin_30"
+            android:layout_marginLeft="@dimen/margin_20"
+            android:background="@color/color_fec955"
+            android:visibility="gone" />
+
+        <TextView
+            style="@style/Text_Black_28"
+            android:layout_marginLeft="@dimen/margin_20"
+            android:text="未拜访"
+            android:textColor="@color/color_333333"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <ImageView
+        style="@style/SplitLine_ImageView"
+        android:layout_marginTop="@dimen/margin_20" />
+
+    <TextView
+        style="@style/Text_aaa_28"
+        android:layout_gravity="end"
+        android:layout_marginRight="@dimen/common_margin"
+        android:layout_marginTop="@dimen/margin_10"
+        android:text="单位 (元)" />
+</LinearLayout>

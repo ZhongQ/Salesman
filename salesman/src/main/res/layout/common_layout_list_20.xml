@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.salesman.activity.personal.MySigninActivity">
+
+    <include layout="@layout/common_title" />
+
+    <com.studio.jframework.widget.listview.UltimateListView
+        android:id="@+id/lv_common_20"
+        style="@style/ListView_BaseStyle"
+        app:dividerHeight="10dp" />
+</LinearLayout>

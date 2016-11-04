@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:orientation="vertical"
+    tools:context="com.salesman.activity.MainActivity">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/nosliding_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/line_home_grey" />
+
+    <RadioGroup
+        android:id="@+id/main_radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_100"
+        android:background="@color/little_grey_bottom_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/margin_8"
+        android:paddingTop="@dimen/margin_16">
+
+        <RadioButton
+            android:id="@+id/main_rb1"
+            style="@style/main_tab_bottom"
+            android:checked="true"
+            android:drawableTop="@drawable/icon_tb1"
+            android:textColor="@drawable/tab_selector" />
+
+        <RadioButton
+            android:id="@+id/main_rb2"
+            style="@style/main_tab_bottom"
+            android:drawableTop="@drawable/icon_tb2"
+            android:textColor="@drawable/tab_selector" />
+
+        <RadioButton
+            android:id="@+id/main_rb3"
+            style="@style/main_tab_bottom"
+            android:drawableTop="@drawable/icon_tb3"
+            android:textColor="@drawable/tab_selector" />
+
+        <RadioButton
+            android:id="@+id/main_rb4"
+            style="@style/main_tab_bottom"
+            android:drawableTop="@drawable/icon_tb4"
+            android:textColor="@drawable/tab_selector" />
+    </RadioGroup>
+
+</LinearLayout>

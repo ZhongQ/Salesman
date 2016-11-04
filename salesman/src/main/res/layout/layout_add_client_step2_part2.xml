@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout style="@style/Client_Layout">
+
+        <TextView
+            style="@style/Client_Text1"
+            android:text="其他合作平台" />
+
+        <TextView
+            android:id="@+id/tv_hezuo"
+            style="@style/Client_Text2"
+            android:text="无" />
+
+        <ToggleButton
+            android:id="@+id/tb_hezuo"
+            style="@style/ToggleButton" />
+    </LinearLayout>
+
+    <ImageView style="@style/Client_SplitLine" />
+
+    <LinearLayout style="@style/Client_Layout">
+
+        <TextView
+            style="@style/Client_Text1"
+            android:text="是否连锁" />
+
+        <TextView
+            android:id="@+id/tv_liansuo"
+            style="@style/Client_Text2"
+            android:text="无" />
+
+        <ToggleButton
+            android:id="@+id/tb_liansuo"
+            style="@style/ToggleButton" />
+    </LinearLayout>
+
+    <ImageView style="@style/Client_SplitLine" />
+
+    <LinearLayout
+        android:id="@+id/lay_yancao"
+        style="@style/Client_Layout">
+
+        <TextView
+            style="@style/Client_Text1"
+            android:text="烟草许可证" />
+
+        <TextView
+            android:id="@+id/tv_yancao"
+            style="@style/Client_Text2"
+            android:text="无" />
+
+        <ToggleButton
+            android:id="@+id/tb_yancao"
+            style="@style/ToggleButton" />
+    </LinearLayout>
+
+    <ImageView style="@style/Client_SplitLine" />
+
+    <LinearLayout style="@style/Client_Layout">
+
+        <TextView
+            style="@style/Client_Text1"
+            android:text="POS机" />
+
+        <TextView
+            android:id="@+id/tv_pos"
+            style="@style/Client_Text2"
+            android:text="无" />
+
+        <ToggleButton
+            android:id="@+id/tb_pos"
+            style="@style/ToggleButton" />
+    </LinearLayout>
+
+    <ImageView style="@style/Client_SplitLine" />
+
+    <LinearLayout style="@style/Client_Layout">
+
+        <TextView
+            style="@style/Client_Text1"
+            android:text="电脑" />
+
+        <TextView
+            android:id="@+id/tv_pc"
+            style="@style/Client_Text2"
+            android:text="无" />
+
+        <ToggleButton
+            android:id="@+id/tb_pc"
+            style="@style/ToggleButton" />
+    </LinearLayout>
+
+    <ImageView style="@style/Client_SplitLine" />
+
+    <LinearLayout style="@style/Client_Layout">
+
+        <TextView
+            style="@style/Client_Text1"
+            android:text="WiFi" />
+
+        <TextView
+            android:id="@+id/tv_wifi"
+            style="@style/Client_Text2"
+            android:text="无" />
+
+        <ToggleButton
+            android:id="@+id/tb_wifi"
+            style="@style/ToggleButton" />
+    </LinearLayout>
+
+    <ImageView style="@style/Client_SplitLine" />
+
+</LinearLayout>

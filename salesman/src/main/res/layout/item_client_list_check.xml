@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/button_ripple"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/left_right_12dp"
+        android:paddingRight="@dimen/left_right_12dp">
+
+        <ImageView
+            android:id="@+id/iv_bg_head"
+            android:layout_width="@dimen/margin_40dp"
+            android:layout_height="@dimen/margin_40dp"
+            android:layout_gravity="center"
+            android:background="@drawable/circle_1" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/shop_icon" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_name_client"
+                style="@style/Text_Black_28"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="芙蓉兴盛便利店"
+                android:textSize="@dimen/size_14sp" />
+
+            <TextView
+                android:id="@+id/tv_addr_client"
+                style="@style/Text_666_24"
+                android:layout_marginBottom="@dimen/margin_10dp"
+                android:layout_marginTop="@dimen/margin_2dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="南三区科技园粤兴6道"
+                android:textSize="@dimen/size_12sp" />
+
+            <ImageView style="@style/SplitLine_ImageView" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/common_margin"
+            android:src="@drawable/arrow_right_grey" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/margin_45dp"
+    android:background="@drawable/button_ripple"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/left_right_12dp"
+    android:paddingRight="@dimen/left_right_12dp">
+
+    <TextView
+        android:id="@+id/tv_time_track"
+        style="@style/Text_Black_28"
+        android:background="@drawable/track_time"
+        android:paddingLeft="@dimen/margin_18dp"
+        android:paddingRight="@dimen/margin_5dp"
+        android:text="09:00"
+        android:textColor="@color/grey_black"
+        android:textSize="@dimen/size_14sp" />
+
+    <TextView
+        android:id="@+id/tv_address_track"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_10dp"
+        android:layout_weight="4"
+        android:singleLine="true"
+        android:text="桃园路110号"
+        android:textColor="@color/little_black"
+        android:textSize="@dimen/size_14sp" />
+
+    <TextView
+        android:id="@+id/tv_signin_track"
+        style="@style/Text_999_28"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="right"
+        android:text="签到"
+        android:textSize="@dimen/size_14sp" />
+</LinearLayout>

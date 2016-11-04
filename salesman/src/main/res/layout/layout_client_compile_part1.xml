@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout style="@style/Client_Layout">
+
+        <TextView
+            style="@style/Client_Text1"
+            android:text="注册手机" />
+
+        <EditText
+            android:id="@+id/et_register_tel"
+            style="@style/ClientEditText"
+            android:hint="请输入注册手机号"
+            android:inputType="number"
+            android:numeric="integer" />
+
+    </LinearLayout>
+
+    <ImageView style="@style/Client_SplitLine" />
+
+    <LinearLayout style="@style/Client_Layout">
+
+        <TextView
+            style="@style/Client_Text1"
+            android:text="营业执照" />
+
+        <EditText
+            android:id="@+id/et_zhizhao"
+            style="@style/ClientEditText"
+            android:hint="请输入营业执照号码" />
+
+    </LinearLayout>
+
+    <ImageView style="@style/Client_SplitLine" />
+
+</LinearLayout>

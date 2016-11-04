@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_60"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingRight="@dimen/common_margin">
+
+        <ImageView
+            android:layout_width="@dimen/margin_6"
+            android:layout_height="match_parent"
+            android:background="@color/color_007ed2"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_signin_type"
+            style="@style/Text_Black_24"
+            android:layout_width="0dp"
+            android:layout_marginLeft="@dimen/margin_26"
+            android:layout_weight="1"
+            android:textColor="@color/color_007ed2"
+            tools:text="外勤签到" />
+
+        <TextView
+            android:id="@+id/tv_signin_num"
+            style="@style/Text_Black_24"
+            android:layout_marginLeft="@dimen/margin_22"
+            android:textColor="@color/color_007ed2"
+            tools:text="2/16" />
+    </LinearLayout>
+
+    <ImageView style="@style/SplitLine_ImageView" />
+</LinearLayout>

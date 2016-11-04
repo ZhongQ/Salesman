@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_notice_common" />
+
+    <ImageView style="@style/SplitLine_ImageView" />
+
+    <TextView
+        android:id="@+id/tv_notice_content"
+        style="@style/Text_333_28"
+        android:layout_height="@dimen/margin_170"
+        android:ellipsize="end"
+        android:lineSpacingExtra="@dimen/margin_10"
+        android:maxLines="3"
+        android:paddingBottom="@dimen/common_margin_20"
+        android:paddingLeft="@dimen/common_margin"
+        android:paddingRight="@dimen/common_margin"
+        android:paddingTop="@dimen/common_margin_20"
+        tools:text="公告内容公告内容公告内容公告内容公告内容公告内容公告内容公告内容公告内容公告内容公告内容公告内容公告内容公告内容公告内容公告内容公告内容公告内容公告内容公告内容公告内容公告内容公告内容公告内容" />
+</LinearLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_zhanji_filter1"
+        style="@style/Text_Black_28"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:paddingBottom="@dimen/margin_20"
+        android:paddingTop="@dimen/margin_20"
+        android:singleLine="true"
+        android:text="南山办" />
+
+    <ImageView style="@style/SplitLine_ImageView" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/line_vertical_thick"
+            android:visibility="invisible" />
+
+        <TextView
+            style="@style/Text_Black_24"
+            android:drawablePadding="@dimen/margin_6"
+            android:drawableTop="@drawable/filtrate_icon"
+            android:gravity="center"
+            android:paddingBottom="@dimen/margin_10"
+            android:paddingLeft="@dimen/common_margin"
+            android:paddingRight="@dimen/common_margin"
+            android:paddingTop="@dimen/margin_10"
+            android:text="筛选"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/tv_zhanji_filter2"
+            style="@style/Text_Black_24"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingBottom="@dimen/margin_20"
+            android:paddingTop="@dimen/margin_20"
+            android:singleLine="true"
+            android:textColor="@color/color_007ed2"
+            tools:text="福田区（鑫钰商行）组" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/line_vertical_thick" />
+
+        <TextView
+            android:id="@+id/tv_filter_zhanji"
+            style="@style/Text_Black_24"
+            android:drawablePadding="@dimen/margin_6"
+            android:drawableTop="@drawable/filtrate_icon"
+            android:gravity="center"
+            android:paddingBottom="@dimen/margin_10"
+            android:paddingLeft="@dimen/common_margin"
+            android:paddingRight="@dimen/common_margin"
+            android:paddingTop="@dimen/margin_10"
+            android:text="筛选"
+            android:textSize="@dimen/size_20" />
+
+    </LinearLayout>
+
+    <ImageView style="@style/SplitLine_ImageView" />
+</LinearLayout>

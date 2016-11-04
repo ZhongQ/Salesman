@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_visit_plan_new"
+    style="@style/Layout_Base_Style"
+    tools:context="com.salesman.activity.work.VisitPlanNewActivity">
+
+    <include layout="@layout/common_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <com.salesman.views.textview.BrandTextView
+            android:id="@+id/tv_visit_num"
+            style="@style/Text_009_28"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin_48"
+            android:text="0"
+            android:textSize="@dimen/size_100" />
+
+        <TextView
+            android:id="@+id/tv_progress"
+            style="@style/Text_009_24"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin_10"
+            android:text="拜访进度" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_30"
+            android:paddingLeft="@dimen/margin_50"
+            android:paddingRight="@dimen/margin_50">
+
+            <TextView
+                android:id="@+id/tv_line_name"
+                style="@style/Text_009_24"
+                tools:text="1号线" />
+
+            <TextView
+                android:id="@+id/tv_line_total"
+                style="@style/Text_009_24"
+                android:layout_alignParentRight="true"
+                tools:text="55家" />
+        </RelativeLayout>
+
+        <SeekBar
+            android:id="@+id/seekbar_plan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_30"
+            android:layout_marginTop="@dimen/margin_12"
+            android:maxHeight="@dimen/margin_55"
+            android:minHeight="@dimen/margin_1"
+            android:paddingLeft="0px"
+            android:paddingRight="0px"
+            android:progressDrawable="@drawable/seekbar_define_color_style"
+            android:splitTrack="false"
+            android:thumb="@drawable/seekbar_icon"
+            android:thumbOffset="@dimen/margin_0" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_margin_20"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/Text_009_24"
+            android:layout_height="@dimen/margin_80"
+            android:drawableLeft="@drawable/biaotou_blue"
+            android:drawablePadding="@dimen/margin_10"
+            android:gravity="center_vertical"
+            android:text="本周拜访计划" />
+
+        <ImageView style="@style/SplitLine_ImageView" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_60"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/margin_34"
+            android:paddingRight="@dimen/margin_34">
+
+            <TextView
+                style="@style/Text_666_24"
+                android:layout_width="@dimen/margin_0dp"
+                android:layout_weight="1"
+                android:text="星期" />
+
+            <TextView
+                style="@style/Text_666_24"
+                android:layout_width="@dimen/margin_0dp"
+                android:layout_weight="1"
+                android:text="路线" />
+
+            <TextView
+                style="@style/Text_666_24"
+                android:layout_width="@dimen/margin_0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="客户数量" />
+
+            <TextView
+                style="@style/Text_666_24"
+                android:layout_width="@dimen/margin_0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="已拜访" />
+
+            <TextView
+                style="@style/Text_666_24"
+                android:layout_width="@dimen/margin_0dp"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="拜访状态" />
+        </LinearLayout>
+
+        <ImageView style="@style/SplitLine_ImageView" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_visit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

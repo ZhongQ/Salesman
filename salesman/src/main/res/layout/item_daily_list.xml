@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/button_ripple"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/common_margin">
+
+    <TextView
+        android:id="@+id/tv_time_title_daily"
+        style="@style/Text_666_24"
+        android:layout_width="match_parent"
+        android:background="@color/no_content_bg"
+        android:gravity="center"
+        android:paddingBottom="@dimen/margin_20"
+        android:paddingTop="@dimen/margin_30"
+        android:text="2016-3-30 20:00:00 星期三" />
+
+    <View
+        android:id="@+id/view_split_bg"
+        style="@style/SplitStrip_20"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_80"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/common_margin">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_bg_head_comment"
+                android:layout_width="@dimen/margin_60"
+                android:layout_height="@dimen/margin_60"
+                android:layout_gravity="center"
+                android:background="@drawable/user_head_bg" />
+
+            <TextView
+                android:id="@+id/tv_name_short_comment"
+                style="@style/Text_Black_24"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                tools:text="小鱼" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_creater"
+            style="@style/Text_Black_32"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="@dimen/margin_20"
+            android:text="西红柿"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tv_dept_post"
+            style="@style/Text_666_24"
+            android:layout_width="0dp"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_marginRight="@dimen/margin_10"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:text="经理" />
+
+        <TextView
+            android:id="@+id/tv_time_daily"
+            style="@style/Text_ccc_24"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="@dimen/common_margin"
+            android:singleLine="true"
+            tools:text="14:32:55" />
+    </LinearLayout>
+
+    <ImageView
+        style="@style/SplitLine_ImageView"
+        android:layout_marginLeft="@dimen/common_margin" />
+
+    <include
+        layout="@layout/view_report_public"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_marginRight="@dimen/common_margin" />
+
+    <com.studio.jframework.widget.listview.InnerListView
+        android:id="@+id/lv_comment_daily_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_marginRight="@dimen/common_margin"
+        android:background="@drawable/comment_details_bg"
+        android:divider="@color/transparent"
+        android:dividerHeight="0dp"
+        android:paddingLeft="@dimen/margin_10"
+        android:paddingRight="@dimen/margin_10" />
+
+    <TextView
+        android:id="@+id/tv_read"
+        style="@style/Text_Black_24"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_marginRight="@dimen/common_margin"
+        android:layout_marginTop="@dimen/margin_10"
+        android:textColor="@color/color_aaaaaa"
+        tools:text="已阅：李坏、元宝、xioab、十四郎" />
+</LinearLayout>

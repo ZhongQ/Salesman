@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.salesman.activity.work.ZhanJiActivity">
+
+    <include layout="@layout/common_title" />
+
+    <com.salesman.views.HoveringScrollView
+        android:id="@+id/hs_zhanji"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--<include layout="@layout/view_head_zhanji" />-->
+
+            <FrameLayout
+                android:id="@+id/lay_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <include layout="@layout/view_zhanji_filtrate"/>
+
+            </FrameLayout>
+
+            <include layout="@layout/view_zhanji_part1" />
+
+            <include layout="@layout/view_zhanji_part2" />
+
+        </LinearLayout>
+    </com.salesman.views.HoveringScrollView>
+</LinearLayout>

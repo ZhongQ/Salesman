@@ -1,0 +1,206 @@
+<resources>
+    <string name="app_name">阿街足迹</string>
+    <string name="app_name_simple">阿街</string>
+
+    <!--引导页-->
+    <string name="guide_text">"立即体验"</string>
+
+    <!--主界面 -->
+    <string name="title">"标题"</string>
+    <string name="tab1">"首页"</string>
+    <string name="tab2">"管理"</string>
+    <string name="tab3">"客户"</string>
+    <string name="tab4">"我的"</string>
+    <string name="manager">"管理者"</string>
+    <string name="work">"工作"</string>
+
+    <!--首页-->
+    <string name="signin">签到</string>
+    <string name="footprint">足迹</string>
+    <string name="hint_signin">请填写备注内容（选填）</string>
+    <string name="time">时间</string>
+    <string name="address">地址</string>
+    <string name="type">类型</string>
+    <string name="go_to_work">上班</string>
+    <string name="get_off_work">下班</string>
+    <string name="siginin_succeed">签到成功</string>
+    <string name="siginin_fail">签到失败</string>
+    <string name="mingxi">明细</string>
+    <string name="notice_column">公告栏</string>
+    <string name="outside_signin">外勤签到</string>
+    <string name="gps_open_setting">为了正常记录您的足迹数据，必须开启您的GPS定位功能。</string>
+    <string name="hit_card">打卡</string>
+    <string name="newest_notice">最新公告</string>
+    <string name="first_signin_please">请先上班签到</string>
+    <string name="ajie_remind">阿街提醒</string>
+
+    <!--管理-->
+    <string name="announcement">公告</string>
+    <string name="release_notice">发公告</string>
+    <string name="today_track">今日足迹</string>
+    <string name="today_signin">今日签到</string>
+    <string name="release">发布</string>
+    <string name="input_subject">请输入标题(50字以内)</string>
+    <string name="input_content">请输入内容(1000字以内)</string>
+    <string name="release_object">发布对象：</string>
+    <string name="release_object_title">发布对象</string>
+    <string name="release_succeed">发布成功</string>
+    <string name="release_fail">发布失败</string>
+    <string name="input_release_obj">请输入发布对象</string>
+    <string name="all_people">全体成员</string>
+    <string name="my_department">我的部门</string>
+    <string name="all_manager">所有管理者</string>
+    <string name="operating_center_people">运用中心全体成员</string>
+    <string name="select_release_obj">请选择发布对象</string>
+    <string name="notice_detail">公告详情</string>
+    <string name="all_notice">全部公告</string>
+
+    <!--客户-->
+    <string name="client_detail">客户详情</string>
+    <string name="principal">负责人</string>
+    <string name="save">保存</string>
+    <string name="save_success">保存成功</string>
+    <string name="man">男</string>
+    <string name="woman">女</string>
+    <string name="add">添加</string>
+    <string name="add_client">添加客户</string>
+    <string name="shop_type">商铺类型</string>
+    <string name="goods_type">主营商品</string>
+    <string name="pay_way">支付方式</string>
+    <string name="compile">编辑</string>
+    <string name="add_client_success">客户添加成功</string>
+    <string name="add_client_fail">添加失败</string>
+    <string name="edit_client_success">修改成功</string>
+    <string name="edit_client_fail">修改失败</string>
+    <string name="salesman">业务员</string>
+    <string name="check_pending">待审核</string>
+    <string name="refused">已拒绝</string>
+    <string name="client_compile">客户编辑</string>
+    <string name="select_please">请选择</string>
+    <string name="must_choose_please">请选择（必填）</string>
+    <string name="business_hours">营业时间</string>
+    <string name="all_subordinate">全部下属</string>
+    <string name="all_line">全部线路</string>
+
+    <!--添加客户-->
+    <string name="input_shop_name_please">请输入商铺名称</string>
+    <string name="select_shop_type_please">请选择商铺类型</string>
+    <string name="input_shop_tel_please">请输入固定电话</string>
+    <string name="select_shop_area_please">请选择所属区域</string>
+    <string name="input_shop_address_please">请输入商铺地址</string>
+    <string name="input_boss_name_please">请输入负责人名字</string>
+    <string name="input_boss_tel_please">请输入联系方式</string>
+    <string name="input_right_tel_please">请输入正确的固定电话</string>
+    <string name="input_right_mobile_please">请输入正确的联系方式</string>
+
+    <!--个人中心-->
+    <string name="my_misson">我的任务</string>
+    <string name="my_trace">我的足迹</string>
+    <string name="manage_xiashu">管理下属</string>
+    <string name="my_xiashu">我的下属</string>
+    <string name="my_signin">我的签到</string>
+    <string name="history_misson">历史任务</string>
+    <string name="history_trace">历史足迹</string>
+    <string name="history_signin">历史签到</string>
+    <string name="change_password">修改密码</string>
+    <string name="input_old_password">请输入原密码</string>
+    <string name="input_new_password">请输入新密码</string>
+    <string name="input_new_password_again">请再次输入新密码</string>
+    <string name="affirm">确定</string>
+    <string name="history_track">历史足迹</string>
+    <string name="history_sign">历史签到</string>
+    <string name="pw_success_change">密码修改成功</string>
+    <string name="date_after_today">日期不得晚于今天</string>
+    <string name="back">返回</string>
+    <string name="submit">提交</string>
+    <string name="my_message">我的消息</string>
+    <string name="setting">设置</string>
+    <string name="my_zhanji">我的战绩</string>
+    <string name="about_us">关于我们</string>
+    <string name="company_name">深圳市转角街坊网络科技有限公司</string>
+    <string name="company_copyrighe">Copyright © 2014-2016 zjjf.com</string>
+
+    <!--日报-->
+    <string name="release_daily">发日报</string>
+    <string name="daily_details">日报详情</string>
+    <string name="daily_hint_must_write">您有必填项没有填写</string>
+    <string name="daily_number_hint_must">请填写数字（必填）</string>
+    <string name="daily_number_hint_select">请填写数字（选填）</string>
+    <string name="daily_text_hint_must">请填写文字（必填）</string>
+    <string name="daily_text_hint_select">请填写文字（选填）</string>
+    <string name="comment_daily_hint">请输入内容</string>
+    <string name="comment_success">评论成功</string>
+    <string name="comment_please">请评论</string>
+    <string name="reply_please">回复：</string>
+    <string name="comment">评论</string>
+    <string name="cannot_comment">不能回复本人</string>
+    <string name="daily_template">日报模板</string>
+    <string name="cancel">取消</string>
+
+    <!--日志-->
+    <string name="report">日志</string>
+    <string name="release_report">发日志</string>
+    <string name="report_details">日志详情</string>
+    <string name="report_template">日志模板</string>
+    <string name="my_report">我的日志</string>
+    <string name="today_report">今日日志</string>
+    <string name="all_message">全部</string>
+    <string name="message_centre">消息中心</string>
+    <string name="history_message">历史</string>
+    <string name="ninety_nine">99+</string>
+
+    <!-- 工作战绩-->
+    <string name="dianbao_turnover">店宝交易</string>
+    <string name="lianhe_turnover">联合采购额</string>
+    <string name="look_detail">查看明细</string>
+    <string name="already_visit">已拜访</string>
+    <string name="no_visit">未拜访</string>
+    <string name="zhuanjiao_ziying">转角自营</string>
+    <string name="jiaoyi_detail_dianbao">店宝交易明细</string>
+    <string name="jiaoyi_detail_zhuanjiao">转角自营明细</string>
+    <string name="visit_plan">拜访安排</string>
+    <string name="visit_jh">拜访计划</string>
+    <string name="today_visit">今日拜访</string>
+
+    <!--设置-->
+    <string name="modification_password">修改密码</string>
+    <string name="msgs_sound">新消息提示音</string>
+    <string name="cancel_login">注销登录</string>
+    <string name="delete">删除</string>
+
+    <!--应用更新-->
+    <string name="soft_update_info">检测到新版本，立即更新吗</string>
+    <string name="soft_update_updatebtn">更新</string>
+    <string name="soft_update_later">稍后更新</string>
+    <string name="soft_updating">正在更新</string>
+    <string name="sd_error">SD卡检测失败</string>
+
+    <!--无网络或无数据时提示-->
+    <string name="no_data_hint">暂无内容</string>
+    <string name="no_net_hint">网络未连接</string>
+    <string name="refresh">刷新</string>
+    <string name="no_notice_hint">暂无公告</string>
+    <string name="no_signin_hint">暂无签到</string>
+    <string name="no_track_hint">暂无足迹</string>
+    <string name="no_client_hint">暂无客户</string>
+    <string name="no_subordinate_hint">暂无下属</string>
+    <string name="no_daily_hint">暂无日志</string>
+    <string name="no_message_hint">暂无新消息</string>
+    <string name="no_visit_plan">拜访计划暂未安排</string>
+    <string name="net_exception">网络异常，请检查网络设置</string>
+
+    <!-- 图片上传提示语-->
+    <string name="upload_pic_fail">图片上传失败请重新提交</string>
+
+    <!--加载提示语-->
+    <string name="loading1">加载中&#8230;</string>
+    <string name="submitting">提交中&#8230;</string>
+    <string name="searching">搜索中&#8230;</string>
+    <string name="uploading">上传中&#8230;</string>
+    <string name="deleting">删除中&#8230;</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>

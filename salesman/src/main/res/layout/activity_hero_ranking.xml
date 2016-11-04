@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_hero_ranking"
+    style="@style/Layout_Base_Style"
+    tools:context="com.salesman.activity.work.HeroRankingActivity">
+
+    <include layout="@layout/common_title" />
+
+    <com.salesman.views.indicator.FixedIndicatorView
+        android:id="@+id/fixed_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_80"
+        android:background="@color/white" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_hero_ranking"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

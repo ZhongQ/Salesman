@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/Text_009_24"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_80"
+        android:drawableLeft="@drawable/biaotou_blue"
+        android:drawablePadding="@dimen/margin_12"
+        android:gravity="center_vertical"
+        android:text="交易额" />
+
+    <ImageView style="@style/SplitLine_ImageView" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_40"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/common_margin">
+
+        <TextView
+            style="@style/Text_666_24"
+            android:layout_height="@dimen/margin_70"
+            android:gravity="center_vertical"
+            android:text="店宝交易额" />
+
+        <ImageView style="@style/SplitLine_ImageView" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_40"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ProgressBar
+                android:id="@+id/pb_1"
+                style="@style/Progress_Horizontal_Style" />
+
+            <TextView
+                style="@style/Text_666_24"
+                android:layout_marginLeft="@dimen/margin_30"
+                android:drawableLeft="@drawable/point_1"
+                android:drawablePadding="@dimen/margin_10"
+                android:text="今日" />
+
+            <com.salesman.views.textview.BrandTextView
+                android:id="@+id/tv_today_dianbao"
+                style="@style/Text_999_48"
+                android:layout_marginLeft="@dimen/margin_20"
+                android:text="0" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_38"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ProgressBar
+                android:id="@+id/pb_2"
+                style="@style/Progress_Horizontal_Style"
+                android:progressDrawable="@drawable/progressbar_horizontal_2" />
+
+            <TextView
+                style="@style/Text_666_24"
+                android:layout_marginLeft="@dimen/margin_30"
+                android:drawableLeft="@drawable/point_2"
+                android:drawablePadding="@dimen/margin_10"
+                android:text="昨日" />
+
+            <com.salesman.views.textview.BrandTextView
+                android:id="@+id/tv_yesterday_dianbao"
+                style="@style/Text_999_48"
+                android:layout_marginLeft="@dimen/margin_20"
+                android:text="0" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_38"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ProgressBar
+                android:id="@+id/pb_3"
+                style="@style/Progress_Horizontal_Style"
+                android:progressDrawable="@drawable/progressbar_horizontal_3" />
+
+            <TextView
+                style="@style/Text_666_24"
+                android:layout_marginLeft="@dimen/margin_30"
+                android:drawableLeft="@drawable/point_3"
+                android:drawablePadding="@dimen/margin_10"
+                android:text="本月" />
+
+            <com.salesman.views.textview.BrandTextView
+                android:id="@+id/tv_month_dianbao"
+                style="@style/Text_999_48"
+                android:layout_marginLeft="@dimen/margin_20"
+                android:text="0" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_38"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ProgressBar
+                android:id="@+id/pb_4"
+                style="@style/Progress_Horizontal_Style"
+                android:progressDrawable="@drawable/progressbar_horizontal_4" />
+
+            <TextView
+                style="@style/Text_666_24"
+                android:layout_marginLeft="@dimen/margin_30"
+                android:drawableLeft="@drawable/point_4"
+                android:drawablePadding="@dimen/margin_10"
+                android:text="上月" />
+
+            <com.salesman.views.textview.BrandTextView
+                android:id="@+id/tv_last_month_dianbao"
+                style="@style/Text_999_48"
+                android:layout_marginLeft="@dimen/margin_20"
+                android:text="0" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView style="@style/SplitLine_ImageView" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_40"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/common_margin">
+
+        <TextView
+            style="@style/Text_666_24"
+            android:layout_height="@dimen/margin_70"
+            android:gravity="center_vertical"
+            android:text="自营交易额" />
+
+        <ImageView style="@style/SplitLine_ImageView" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_40"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ProgressBar
+                android:id="@+id/pb_5"
+                style="@style/Progress_Horizontal_Style" />
+
+            <TextView
+                style="@style/Text_666_24"
+                android:layout_marginLeft="@dimen/margin_30"
+                android:drawableLeft="@drawable/point_1"
+                android:drawablePadding="@dimen/margin_10"
+                android:text="今日" />
+
+            <com.salesman.views.textview.BrandTextView
+                android:id="@+id/tv_today_ziying"
+                style="@style/Text_999_48"
+                android:layout_marginLeft="@dimen/margin_20"
+                android:text="0" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_38"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ProgressBar
+                android:id="@+id/pb_6"
+                style="@style/Progress_Horizontal_Style"
+                android:progressDrawable="@drawable/progressbar_horizontal_2" />
+
+            <TextView
+                style="@style/Text_666_24"
+                android:layout_marginLeft="@dimen/margin_30"
+                android:drawableLeft="@drawable/point_2"
+                android:drawablePadding="@dimen/margin_10"
+                android:text="昨日" />
+
+            <com.salesman.views.textview.BrandTextView
+                android:id="@+id/tv_yesterday_ziying"
+                style="@style/Text_999_48"
+                android:layout_marginLeft="@dimen/margin_20"
+                android:text="0" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_38"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ProgressBar
+                android:id="@+id/pb_7"
+                style="@style/Progress_Horizontal_Style"
+                android:progressDrawable="@drawable/progressbar_horizontal_3" />
+
+            <TextView
+                style="@style/Text_666_24"
+                android:layout_marginLeft="@dimen/margin_30"
+                android:drawableLeft="@drawable/point_3"
+                android:drawablePadding="@dimen/margin_10"
+                android:text="本月" />
+
+            <com.salesman.views.textview.BrandTextView
+                android:id="@+id/tv_month_ziying"
+                style="@style/Text_999_48"
+                android:layout_marginLeft="@dimen/margin_20"
+                android:text="0" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_38"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ProgressBar
+                android:id="@+id/pb_8"
+                style="@style/Progress_Horizontal_Style"
+                android:progressDrawable="@drawable/progressbar_horizontal_4" />
+
+            <TextView
+                style="@style/Text_666_24"
+                android:layout_marginLeft="@dimen/margin_30"
+                android:drawableLeft="@drawable/point_4"
+                android:drawablePadding="@dimen/margin_10"
+                android:text="上月" />
+
+            <com.salesman.views.textview.BrandTextView
+                android:id="@+id/tv_last_month_ziying"
+                style="@style/Text_999_48"
+                android:layout_marginLeft="@dimen/margin_20"
+                android:text="0" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView style="@style/SplitLine_ImageView" />
+</LinearLayout>

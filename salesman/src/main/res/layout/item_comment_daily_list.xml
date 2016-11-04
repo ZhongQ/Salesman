@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_comment_daily_list"
+        style="@style/Text_Black_28"
+        android:text="我是评论和回复我是评论和回复我是评论和回复我是评论和回复我是评论和回复我是评论和回复我是评论和回复我是评论和回复我是评论和回复我是评论和回复"
+        android:textColor="@color/color_007ed2" />
+</LinearLayout>

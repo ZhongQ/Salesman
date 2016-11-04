@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.salesman.activity.client.ClientCheckDetailActivity">
+
+    <include layout="@layout/common_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <include layout="@layout/view_client_check_detail" />
+
+            <ImageView style="@style/Client_SplitLine" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/common_margin"
+                android:paddingRight="@dimen/common_margin">
+
+                <TextView
+                    style="@style/Text_666_28"
+                    android:text="店主名字："
+                    android:textColor="@color/color_666666" />
+
+                <TextView
+                    android:id="@+id/tv_shopkeeper"
+                    style="@style/Text_666_28"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    tools:text="张三" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_5"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/common_margin"
+                android:paddingRight="@dimen/common_margin">
+
+                <TextView
+                    style="@style/Text_666_28"
+                    android:text="注册手机："
+                    android:textColor="@color/color_666666" />
+
+                <TextView
+                    android:id="@+id/tv_tel"
+                    style="@style/Text_666_28"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    tools:text="13811112222" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_5"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/common_margin"
+                android:paddingRight="@dimen/common_margin">
+
+                <TextView
+                    style="@style/Text_666_28"
+                    android:text="所属区域："
+                    android:textColor="@color/color_666666" />
+
+                <TextView
+                    android:id="@+id/tv_area"
+                    style="@style/Text_666_28"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    tools:text="广东省深圳市南山区" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_5"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/common_margin"
+                android:paddingRight="@dimen/common_margin">
+
+                <TextView
+                    style="@style/Text_666_28"
+                    android:text="店铺地址："
+                    android:textColor="@color/color_666666" />
+
+                <TextView
+                    android:id="@+id/tv_address"
+                    style="@style/Text_666_28"
+                    android:layout_height="wrap_content"
+                    tools:text="粤兴二道6号粤兴二道6号粤兴二道6号粤兴二道6号" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_5"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/common_margin"
+                android:paddingRight="@dimen/common_margin">
+
+                <TextView
+                    style="@style/Text_666_28"
+                    android:text="营业执照："
+                    android:textColor="@color/color_666666" />
+
+                <TextView
+                    android:id="@+id/tv_license_num"
+                    style="@style/Text_666_28"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    tools:text="000000000" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_50"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/common_margin"
+                android:paddingRight="@dimen/common_margin">
+
+                <TextView
+                    style="@style/Text_666_28"
+                    android:text="营业执照："
+                    android:textColor="@color/color_666666" />
+
+                <ImageView
+                    android:id="@+id/iv_license"
+                    android:layout_width="@dimen/margin_230"
+                    android:layout_height="@dimen/margin_150"
+                    android:layout_marginLeft="@dimen/margin_8"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/no_pic_default" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_40"
+                android:layout_marginTop="@dimen/common_margin"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/common_margin"
+                android:paddingRight="@dimen/common_margin">
+
+                <TextView
+                    style="@style/Text_666_28"
+                    android:text="身份证    ："
+                    android:textColor="@color/color_666666" />
+
+                <ImageView
+                    android:id="@+id/iv_idcard_front"
+                    android:layout_width="@dimen/margin_230"
+                    android:layout_height="@dimen/margin_150"
+                    android:layout_marginLeft="@dimen/margin_8"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/no_pic_default" />
+
+                <ImageView
+                    android:id="@+id/iv_idcard_black"
+                    android:layout_width="@dimen/margin_230"
+                    android:layout_height="@dimen/margin_150"
+                    android:layout_marginLeft="@dimen/margin_20"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/no_pic_default" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lay_choose_dingge"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_80"
+                android:background="@drawable/button_ripple"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/common_margin"
+                android:paddingRight="@dimen/common_margin">
+
+                <TextView
+                    style="@style/Text_666_28"
+                    android:text="分配定格：" />
+
+                <TextView
+                    android:id="@+id/tv_dingge"
+                    style="@style/Text_009_28"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:drawablePadding="@dimen/margin_10"
+                    android:drawableRight="@drawable/arrow_right_blue"
+                    android:singleLine="true"
+                    android:text="请选择" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_30"
+                android:background="@color/white" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_60"
+                android:background="@color/ui_bg" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_80"
+                android:background="@color/ui_bg"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/common_margin"
+                android:paddingRight="@dimen/common_margin">
+
+                <Button
+                    android:id="@+id/btn_refuse"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_grey_bg"
+                    android:gravity="center"
+                    android:text="拒绝"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/size_34" />
+
+                <Button
+                    android:id="@+id/btn_pass"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_blue_bg"
+                    android:gravity="center"
+                    android:text="通过"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/size_34" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

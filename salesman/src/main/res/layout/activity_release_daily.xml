@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.salesman.activity.home.ReleaseDailyActivity">
+
+    <include layout="@layout/common_title" />
+
+    <TextView
+        android:id="@+id/tv_log_name"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_70"
+        android:background="@color/color_7896a4"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/common_margin"
+        android:paddingRight="@dimen/common_margin"
+        android:text="地推专员日报"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size_32" />
+
+    <ScrollView
+        android:id="@+id/scroll_release_daily"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/no_content_bg"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/lay_release_daily"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/common_margin" />
+
+            <EditText
+                android:id="@+id/et_remark_daily"
+                style="@style/SigninEditText"
+                android:layout_height="@dimen/margin_300"
+                android:background="@color/white"
+                android:hint="@string/hint_signin"
+                android:maxLength="200"
+                android:maxLines="10"
+                android:paddingBottom="@dimen/common_margin"
+                android:paddingLeft="@dimen/margin_40"
+                android:paddingRight="@dimen/margin_40"
+                android:paddingTop="@dimen/margin_10"
+                android:textColorHint="@color/color_cccccc"
+                android:textSize="@dimen/size_28" />
+
+            <com.studio.jframework.widget.InnerGridView
+                android:id="@+id/gv_inner_daily"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_30"
+                android:background="@color/white"
+                android:cacheColorHint="@color/transparent"
+                android:listSelector="@color/transparent"
+                android:numColumns="4"
+                android:paddingBottom="@dimen/margin_30"
+                android:paddingLeft="@dimen/margin_40"
+                android:paddingRight="@dimen/margin_40"
+                android:paddingTop="@dimen/margin_30"
+                android:scrollbars="none"
+                android:verticalSpacing="@dimen/margin_40" />
+
+            <include layout="@layout/view_button" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

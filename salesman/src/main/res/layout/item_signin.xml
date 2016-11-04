@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/margin_30">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_70"
+        android:paddingLeft="@dimen/common_margin"
+        android:paddingRight="@dimen/common_margin">
+
+        <TextView
+            android:id="@+id/tv_signin_type"
+            style="@style/Text_Black_32"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            tools:text="上班签到" />
+
+        <TextView
+            android:id="@+id/tv_enter_leave_store"
+            style="@style/Text_Black_24"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_20"
+            android:layout_toRightOf="@+id/tv_signin_type"
+            tools:text="(进店)" />
+
+        <TextView
+            android:id="@+id/tv_signin_time"
+            style="@style/Text_aaa_24"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            tools:text="19:10" />
+    </RelativeLayout>
+
+    <ImageView style="@style/SplitLine_ImageView_Imaginary" />
+
+    <TextView
+        android:id="@+id/tv_signin_address"
+        style="@style/Text_aaa_24"
+        android:layout_marginTop="@dimen/margin_30"
+        android:drawableLeft="@drawable/location_address"
+        android:drawablePadding="@dimen/margin_10"
+        android:ellipsize="end"
+        android:paddingLeft="@dimen/common_margin"
+        android:paddingRight="@dimen/common_margin"
+        android:singleLine="true"
+        tools:text="深圳市南山区武汉大学深圳产学研大楼" />
+
+    <TextView
+        android:id="@+id/tv_client_line_signin"
+        style="@style/Text_aaa_24"
+        android:paddingLeft="@dimen/margin_60"
+        android:paddingRight="@dimen/common_margin"
+        tools:text="兴盛超市，3号线" />
+
+    <TextView
+        android:id="@+id/tv_signin_remark"
+        style="@style/Text_333_24"
+        android:layout_marginTop="@dimen/margin_30"
+        android:paddingLeft="@dimen/common_margin"
+        android:paddingRight="@dimen/common_margin"
+        tools:text="今天上班迟到了，过马路的时候扶了老太太。" />
+
+    <ImageView
+        android:id="@+id/iv_signin"
+        android:layout_width="@dimen/margin_130"
+        android:layout_height="@dimen/margin_130"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_marginTop="@dimen/margin_30"
+        android:scaleType="centerCrop"
+        android:src="@drawable/select_pic_icon"
+        android:visibility="gone" />
+
+    <com.studio.jframework.widget.InnerGridView
+        android:id="@+id/gv_signin_record"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:cacheColorHint="@color/transparent"
+        android:listSelector="@color/transparent"
+        android:numColumns="4"
+        android:paddingLeft="@dimen/margin_40"
+        android:paddingRight="@dimen/margin_40"
+        android:paddingTop="@dimen/margin_30"
+        android:scrollbars="none"
+        android:verticalSpacing="@dimen/margin_40"
+        android:visibility="visible" />
+</LinearLayout>

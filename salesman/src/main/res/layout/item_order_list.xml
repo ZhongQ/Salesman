@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_time_shop_order"
+        style="@style/Text_fff_12sp"
+        android:layout_marginTop="@dimen/margin_20dp"
+        android:background="@drawable/time_order_bg"
+        android:gravity="center"
+        android:paddingLeft="@dimen/margin_15dp"
+        android:paddingRight="@dimen/margin_15dp"
+        android:text="10-18"
+        android:visibility="gone" />
+
+    <android.support.v7.widget.CardView style="@style/CardView_Style">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_50dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/margin_10dp"
+                android:paddingRight="@dimen/margin_10dp">
+
+                <com.salesman.views.CircleHeadView
+                    android:id="@+id/hv_order"
+                    style="@style/CircleHeadView_Style_70"
+                    android:layout_width="@dimen/margin_35dp"
+                    android:layout_height="@dimen/margin_35dp"
+                    android:layout_marginRight="@dimen/margin_5dp"
+                    app:circle_color="@color/color_ff9e00"
+                    app:circle_src="@drawable/shop_icon"
+                    app:shape="rectangle" />
+
+                <TextView
+                    android:id="@+id/tv_name_store"
+                    style="@style/Text_333_16sp"
+                    android:layout_weight="1"
+                    tools:text="芙蓉兴盛便利店" />
+
+                <ImageView
+                    android:id="@+id/iv_zj_logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/zhuanjiao_ziying_icon" />
+
+            </LinearLayout>
+
+            <ImageView style="@style/SplitLine_ImageView" />
+
+            <TextView
+                android:id="@+id/tv_time_order"
+                style="@style/Text_666_12sp"
+                android:layout_marginLeft="@dimen/margin_10dp"
+                android:layout_marginTop="@dimen/margin_12dp"
+                tools:text="2016-09-22 18:48:59" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10dp"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/Text_666_14sp"
+                    android:text="手机号码：" />
+
+                <TextView
+                    android:id="@+id/tv_mobile"
+                    style="@style/Text_666_14sp"
+                    android:layout_marginLeft="@dimen/margin_5dp"
+                    tools:text="13688886666" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10dp"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/Text_666_14sp"
+                    android:text="订单编号：" />
+
+                <TextView
+                    android:id="@+id/tv_no_order"
+                    style="@style/Text_666_14sp"
+                    android:layout_marginLeft="@dimen/margin_5dp"
+                    android:singleLine="true"
+                    tools:text="20160622185259" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_12dp"
+                android:layout_marginLeft="@dimen/margin_10dp"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/Text_666_14sp"
+                    android:text="金额：" />
+
+                <TextView
+                    android:id="@+id/tv_money_order"
+                    style="@style/Text_009_14sp"
+                    android:layout_marginLeft="@dimen/margin_5dp"
+                    tools:text="66666" />
+
+                <TextView
+                    style="@style/Text_666_14sp"
+                    android:layout_weight="1"
+                    android:text="元" />
+
+                <TextView
+                    android:id="@+id/tv_state_order"
+                    style="@style/Text_red_14sp"
+                    android:layout_marginRight="@dimen/margin_10dp"
+                    tools:text="已取消" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_line_order"
+                style="@style/SplitLine_ImageView"
+                android:layout_marginLeft="@dimen/margin_10dp"
+                android:layout_marginRight="@dimen/margin_10dp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tv_look_more_order"
+                style="@style/Text_666_12sp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_40dp"
+                android:drawableRight="@drawable/arrow_right_grey"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/margin_10dp"
+                android:paddingRight="@dimen/margin_10dp"
+                android:text="查看该店铺历史订单"
+                android:visibility="visible" />
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+</LinearLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Layout_Base_Style"
+    tools:context="com.salesman.activity.manage.ReleaseNoticeActivity">
+
+    <include layout="@layout/common_title" />
+
+    <EditText
+        android:id="@+id/ed_subject_notice"
+        style="@style/NoticeEditText"
+        android:layout_height="@dimen/margin_90"
+        android:gravity="center_vertical"
+        android:hint="@string/input_subject"
+        android:maxLength="50"
+        android:singleLine="true" />
+
+    <EditText
+        android:id="@+id/ed_content_notice"
+        style="@style/NoticeEditText"
+        android:layout_height="@dimen/margin_300"
+        android:layout_marginTop="@dimen/margin_20"
+        android:gravity="top|left"
+        android:hint="@string/input_content"
+        android:lines="10"
+        android:maxLength="1000"
+        android:paddingBottom="@dimen/margin_40"
+        android:paddingTop="@dimen/margin_40" />
+
+    <com.studio.jframework.widget.InnerGridView
+        android:id="@+id/gv_release_notice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_30"
+        android:background="@color/white"
+        android:cacheColorHint="@color/transparent"
+        android:listSelector="@color/transparent"
+        android:numColumns="4"
+        android:paddingBottom="@dimen/margin_30"
+        android:paddingLeft="@dimen/margin_40"
+        android:paddingRight="@dimen/margin_40"
+        android:scrollbars="none"
+        android:verticalSpacing="@dimen/margin_40" />
+
+    <TextView
+        android:id="@+id/tv_obj_notice"
+        style="@style/Text_Black_28"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_90"
+        android:layout_marginBottom="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_20"
+        android:background="@drawable/light_grey_selector"
+        android:drawableRight="@drawable/arrow_right_grey"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/common_margin"
+        android:paddingRight="@dimen/common_margin"
+        android:singleLine="true"
+        android:text="@string/release_object"
+        android:textColor="@color/color_737373" />
+
+    <RadioGroup
+        android:id="@+id/rg_release_obj"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/common_margin"
+        android:visibility="gone">
+
+        <RadioButton
+            android:id="@+id/rb_all_people"
+            style="@style/RadioButton_Style"
+            android:text="@string/all_people" />
+
+        <RadioButton
+            android:id="@+id/rb_my_dept"
+            style="@style/RadioButton_Style"
+            android:layout_marginTop="@dimen/margin_20"
+            android:text="@string/my_department" />
+
+        <RadioButton
+            android:id="@+id/rb_all_manmager"
+            style="@style/RadioButton_Style"
+            android:layout_marginTop="@dimen/margin_20"
+            android:text="@string/all_manager" />
+
+        <RadioButton
+            android:id="@+id/rb_gioc_people"
+            style="@style/RadioButton_Style"
+            android:layout_marginTop="@dimen/margin_20"
+            android:text="@string/operating_center_people" />
+    </RadioGroup>
+
+    <include layout="@layout/view_button" />
+</LinearLayout>

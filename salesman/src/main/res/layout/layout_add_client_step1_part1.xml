@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/lay_name_store"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout style="@style/Client_Layout">
+
+            <TextView
+                style="@style/Client_Text1"
+                android:text="商铺名称" />
+
+            <EditText
+                android:id="@+id/et_name_client"
+                style="@style/ClientEditText"
+                android:hint="请输入商铺名称（必填）"
+                android:inputType="text"
+                android:maxLength="20" />
+
+        </LinearLayout>
+
+        <ImageView style="@style/Client_SplitLine" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/lay_type"
+        style="@style/Client_Layout">
+
+        <TextView
+            style="@style/Client_Text1"
+            android:text="商铺类型" />
+
+        <TextView
+            android:id="@+id/tv_type_client"
+            style="@style/Client_Text2" />
+
+        <TextView style="@style/Client_Text3" />
+    </LinearLayout>
+
+    <ImageView style="@style/Client_SplitLine" />
+
+    <LinearLayout style="@style/Client_Layout">
+
+        <TextView
+            style="@style/Client_Text1"
+            android:text="固定电话" />
+
+        <EditText
+            android:id="@+id/et_tel_client"
+            style="@style/ClientEditText"
+            android:hint="请输入商铺固话（必填）"
+            android:inputType="number"
+            android:numeric="integer" />
+
+    </LinearLayout>
+
+    <ImageView style="@style/Client_SplitLine" />
+
+
+    <LinearLayout
+        android:id="@+id/lay_quyu_store"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/lay_quyu"
+            style="@style/Client_Layout">
+
+            <TextView
+                style="@style/Client_Text1"
+                android:text="所属区域" />
+
+            <TextView
+                android:id="@+id/tv_quyu_client"
+                style="@style/Client_Text2" />
+
+            <TextView style="@style/Client_Text3" />
+        </LinearLayout>
+
+        <ImageView style="@style/Client_SplitLine" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/Client_Layout">
+
+        <TextView
+            style="@style/Client_Text1"
+            android:text="详细地址" />
+
+        <EditText
+            android:id="@+id/et_address_client"
+            style="@style/ClientEditText"
+            android:layout_width="@dimen/margin_0dp"
+            android:layout_weight="1"
+            android:hint="请输入商铺地址（必填）"
+            android:inputType="text"
+            android:maxLength="50" />
+
+        <ImageView
+            android:id="@+id/iv_location_client"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/common_margin"
+            android:paddingLeft="@dimen/common_margin"
+            android:paddingTop="@dimen/common_margin"
+            android:src="@drawable/location_client" />
+    </LinearLayout>
+
+    <ImageView style="@style/SplitStrip_20" />
+
+    <LinearLayout style="@style/Client_Layout">
+
+        <TextView
+            style="@style/Client_Text1"
+            android:text="负责人" />
+
+        <EditText
+            android:id="@+id/et_name_boss"
+            style="@style/ClientEditText"
+            android:hint="请输入名字（必填）"
+            android:inputType="text"
+            android:maxLength="10" />
+
+    </LinearLayout>
+
+    <ImageView style="@style/Client_SplitLine" />
+
+    <LinearLayout style="@style/Client_Layout">
+
+        <TextView
+            style="@style/Client_Text1"
+            android:text="联系方式" />
+
+        <EditText
+            android:id="@+id/et_tel_boss"
+            style="@style/ClientEditText"
+            android:hint="请输入联系方式（必填）"
+            android:inputType="number"
+            android:numeric="integer" />
+
+    </LinearLayout>
+
+    <ImageView style="@style/Client_SplitLine" />
+
+    <LinearLayout
+        style="@style/Client_Layout"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/margin_20"
+        android:paddingTop="@dimen/margin_20">
+
+        <TextView
+            style="@style/Client_Text1"
+            android:layout_gravity="top"
+            android:text="负责人备注" />
+
+        <EditText
+            android:id="@+id/et_remark_boss"
+            style="@style/ClientEditText"
+            android:layout_height="@dimen/margin_180"
+            android:gravity="top|left"
+            android:hint="请输入备注"
+            android:maxLength="200" />
+    </LinearLayout>
+
+</LinearLayout>

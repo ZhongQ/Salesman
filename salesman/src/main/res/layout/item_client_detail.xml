@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/margin_90"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/lay_principal"
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:background="@drawable/light_grey_selector"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/common_margin"
+        android:paddingRight="@dimen/common_margin">
+
+        <TextView
+            style="@style/Client_Text1"
+            android:text="负责人" />
+
+        <TextView
+            android:id="@+id/tv_principal_shop"
+            style="@style/Client_Text2"
+            android:text="张三（老板）" />
+
+        <ImageView style="@style/Client_Image" />
+    </LinearLayout>
+
+    <ImageView style="@style/Client_SplitLine" />
+</LinearLayout>
