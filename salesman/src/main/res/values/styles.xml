@@ -609,7 +609,7 @@
     <style name="EasyRecyclerView_Style">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
-        <item name="android:background">@color/ui_bg</item>
+        <!--<item name="android:background">@color/ui_bg</item>-->
         <item name="scrollbars">none</item>
         <item name="layout_progress">@layout/view_progress</item>
         <item name="android:foreground">?android:attr/selectableItemBackground</item>

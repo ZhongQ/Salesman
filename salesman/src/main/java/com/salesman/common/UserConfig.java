@@ -37,6 +37,7 @@ public class UserConfig {
     public static final String HAND_EXIT = "hand_exit";// 手动退出
     public static final String MSGS_SOUND = "MSGS_SOUND";// 首页消息提示音是否开启(V1.6.0作废)
     public static final String NEW_ACTION_GUIDE = "new_action_guide";// 新功能提示
+    public static final String TRACK_SET = "track_set";// 抓取足迹
 
     public static final String DINGGE_LINE = "dingge_line";// 定格线路(V1.6.0作废)
     public static final String CLIENT_TYPE = "client_type";// 客户类型

@@ -449,12 +449,9 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
      */
     private void afterGoToWork() {
         mUserConfig.saveGoToWork(true).apply();
-//        uploadTrack(LocationCoordinateUtil.getLongitude(), LocationCoordinateUtil.getLatitude(), mUserConfig.getLocationAddress(), "1");
         // 关闭定位
         locationManagerUtil.unRegisterLocationListener();
         locationManagerUtil.stopLocation();
-        // 开始轨迹(使用百度鹰眼轨迹，轨迹点上传到百度云服务器，暂不使用)
-//        MainActivity.client.startTrace(MainActivity.trace, MainActivity.startTraceListener);
         // 保存签到时间
         mUserConfig.saveDate(DateUtils.getYMD(System.currentTimeMillis()));
         AlarmUtil.startServiceAlarm();
@@ -465,9 +462,6 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
      */
     private void afterGetOffWork() {
         mUserConfig.saveGetOffWork(true).apply();
-//        uploadTrack(LocationCoordinateUtil.getLongitude(), LocationCoordinateUtil.getLatitude(), mUserConfig.getLocationAddress(), "2");
-        //停止轨迹(暂时不使用)
-//        MainActivity.client.stopTrace(MainActivity.trace, MainActivity.stopTraceListener);
         AlarmUtil.cancelServiceAlarm();
     }
 

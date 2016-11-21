@@ -178,8 +178,8 @@ public class LocationManagerUtil {
 
         @Override
         public void onReceiveLocation(BDLocation location) {
-            // 下班签到后，停止定位
-            if (mUserConfig.getGetOffWork() || mUserConfig.getHandExit()) {
+            // 下班签到后，注销登录，足迹抓取开关关闭，停止定位
+            if (mUserConfig.getGetOffWork() || mUserConfig.getHandExit() || !mUserConfig.getTrackSet()) {
                 unRegisterLocationListener();
                 stopLocation();
                 return;

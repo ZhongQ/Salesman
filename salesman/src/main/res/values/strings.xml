@@ -167,6 +167,7 @@
     <string name="msgs_sound">新消息提示音</string>
     <string name="cancel_login">注销登录</string>
     <string name="delete">删除</string>
+    <string name="set_track">足迹抓取</string>
 
     <!--应用更新-->
     <string name="soft_update_info">检测到新版本，立即更新吗</string>

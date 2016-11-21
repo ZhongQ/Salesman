@@ -20,6 +20,9 @@ public class AlarmUtil {
      * 开启闹钟（与服务绑定）
      */
     public static void startServiceAlarm() {
+        if (!SalesManApplication.g_GlobalObject.getmUserConfig().getTrackSet()) {
+            return;
+        }
         LogUtils.d(TAG, "开启闹钟");
         Context context = SalesManApplication.getInstance();
         Intent intent = new Intent(context, ForegroundService.class);

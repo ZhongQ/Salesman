@@ -39,7 +39,7 @@ public class SettingActivity extends BaseActivity implements View.OnClickListene
     private UserInfoPreference mUserInfo = SalesManApplication.g_GlobalObject.getmUserInfo();
     private UserConfigPreference mUserConfig = SalesManApplication.g_GlobalObject.getmUserConfig();
 
-    private ToggleButton tbSound;
+    private ToggleButton tbTrack;
     private TextView tvUnLogIn;
     private LinearLayout layModifPassword, layAppLog, layAboutUs;
 
@@ -59,8 +59,8 @@ public class SettingActivity extends BaseActivity implements View.OnClickListene
         TextView tvTitle = (TextView) findViewById(R.id.tv_top_title);
         tvTitle.setText(R.string.setting);
         TextView tvBack = (TextView) findViewById(R.id.tv_top_left);
-        tbSound = (ToggleButton) findViewById(R.id.tb_sound);
-        tbSound.setChecked(mUserConfig.getMsgsSound());
+        tbTrack = (ToggleButton) findViewById(R.id.tb_track);
+        tbTrack.setChecked(mUserConfig.getTrackSet());
         tvUnLogIn = (TextView) findViewById(R.id.btn_affirm);
         tvUnLogIn.setText(R.string.cancel_login);
         layModifPassword = (LinearLayout) findViewById(R.id.lay_modif_password);
@@ -75,7 +75,7 @@ public class SettingActivity extends BaseActivity implements View.OnClickListene
     }
 
     private void initEvent() {
-        tbSound.setOnCheckedChangeListener(this);
+        tbTrack.setOnCheckedChangeListener(this);
         tvUnLogIn.setOnClickListener(this);
         layModifPassword.setOnClickListener(this);
         layAppLog.setOnClickListener(this);
@@ -130,8 +130,16 @@ public class SettingActivity extends BaseActivity implements View.OnClickListene
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
         switch (buttonView.getId()) {
-            case R.id.tb_sound:
-                mUserConfig.saveMsgsSound(isChecked).apply();
+            case R.id.tb_track:
+                LogUtils.d(TAG, String.valueOf(isChecked));
+                mUserConfig.saveTrackSet(isChecked).apply();
+                if (isChecked) {
+                    if (mUserConfig.getGotoWork() && !mUserConfig.getGetOffWork()) {
+                        AlarmUtil.startServiceAlarm();
+                    }
+                } else {
+                    AlarmUtil.cancelServiceAlarm();
+                }
                 break;
         }
     }

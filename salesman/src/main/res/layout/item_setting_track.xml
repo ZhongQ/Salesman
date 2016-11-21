@@ -16,7 +16,7 @@
             android:layout_width="@dimen/margin_80"
             android:layout_height="@dimen/margin_90"
             android:scaleType="center"
-            android:src="@drawable/setting_msgs_icon" />
+            android:src="@drawable/setting_track_icon" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -30,13 +30,13 @@
                 android:paddingRight="@dimen/common_margin">
 
                 <TextView
-                    style="@style/Text_Black_32"
+                    style="@style/Text_333_28"
                     android:layout_alignParentLeft="true"
                     android:layout_centerVertical="true"
-                    android:text="@string/msgs_sound" />
+                    android:text="@string/set_track" />
 
                 <ToggleButton
-                    android:id="@+id/tb_sound"
+                    android:id="@+id/tb_track"
                     style="@style/ToggleButton"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"

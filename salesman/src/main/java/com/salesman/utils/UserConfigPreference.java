@@ -59,8 +59,8 @@ public class UserConfigPreference {
         return mPreferences.getLong(UserConfig.UPLOAD_TIME, 0);
     }
 
-    public boolean getMsgsSound() {
-        return mPreferences.getBoolean(UserConfig.MSGS_SOUND, true);
+    public boolean getTrackSet() {
+        return mPreferences.getBoolean(UserConfig.TRACK_SET, true);
     }
 
     public boolean getHandExit() {
@@ -145,8 +145,8 @@ public class UserConfigPreference {
         return this;
     }
 
-    public UserConfigPreference saveMsgsSound(boolean isOpen) {
-        mEditor.putBoolean(UserConfig.MSGS_SOUND, isOpen);
+    public UserConfigPreference saveTrackSet(boolean isOpen) {
+        mEditor.putBoolean(UserConfig.TRACK_SET, isOpen);
         return this;
     }
 

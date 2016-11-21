@@ -169,7 +169,7 @@ public class ForegroundService extends Service {
         screenListener.unregisterListener();
         stopForegroundCompat(NOTIFICATION_ID);
         AppLogUtil.addLogToDB(AppLogUtil.die);
-        if (null != mUserConfig && mUserConfig.getGotoWork() && !mUserConfig.getGetOffWork() && !mUserConfig.getHandExit()) {
+        if (null != mUserConfig && mUserConfig.getGotoWork() && !mUserConfig.getGetOffWork() && !mUserConfig.getHandExit() && mUserConfig.getTrackSet()) {
             AlarmUtil.startServiceAlarm();
         }
     }

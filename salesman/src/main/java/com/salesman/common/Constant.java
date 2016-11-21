@@ -9,10 +9,10 @@ public class Constant {
     // 测试服务
 //    public static final String BASE_URL = "http://jfun360.f3322.net:6077";
 //    public static final String BASE_URL = "http://192.168.1.11:8077";
-//    public static final String BASE_URL = "http://192.168.1.16:6077";// 内网
+    public static final String BASE_URL = "http://192.168.1.16:6077";// 内网
 //    public static final String BASE_URL = "http://112.74.196.61:8077";
     // 正式服务
-    public static final String BASE_URL = "http://www.izjjf.cn";
+//    public static final String BASE_URL = "http://www.izjjf.cn";
     // 元宝服务
 //    public static final String BASE_URL = "http://192.168.31.59:8080";
 //    public static final String BASE_URL = "http://192.168.1.148:8080";
