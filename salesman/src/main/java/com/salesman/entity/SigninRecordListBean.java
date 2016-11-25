@@ -104,6 +104,7 @@ public class SigninRecordListBean extends BaseBean {
         public String visitCust;
         public List<String> picList;// 版本V1.4.0
         public String markType;
+        public int signSeq;
 
         public void setId(String id) {
             this.id = id;

@@ -107,14 +107,21 @@ public class SigninRecordListAdapter extends CommonAdapter<SigninRecordListBean.
             }
             if (!TextUtils.isEmpty(signinBean.markType)) {
                 holder.setVisibility(R.id.tv_enter_leave_store, View.VISIBLE);
-                holder.setVisibility(R.id.tv_enter_leave_store, View.VISIBLE);
                 holder.setTextByString(R.id.tv_enter_leave_store, "(" + signinBean.markType + ")");
             } else {
                 holder.setVisibility(R.id.tv_enter_leave_store, View.GONE);
             }
+            if (signinBean.signSeq != 0) {
+                holder.setVisibility(R.id.tv_num_signin, View.VISIBLE);
+                holder.setTextByString(R.id.tv_num_signin, String.valueOf(signinBean.signSeq));
+//                holder.setTextByString(R.id.tv_num_signin, String.valueOf(20));
+            } else {
+                holder.setVisibility(R.id.tv_num_signin, View.GONE);
+            }
         } else {
             holder.setVisibility(R.id.tv_client_line_signin, View.GONE);
             holder.setVisibility(R.id.tv_enter_leave_store, View.GONE);
+            holder.setVisibility(R.id.tv_num_signin, View.GONE);
         }
 
         ivSignin.setOnClickListener(new View.OnClickListener() {

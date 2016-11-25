@@ -60,7 +60,7 @@
             <TextView
                 android:id="@+id/tv_filtrate3"
                 style="@style/Client_Filtrate_Text_Style_DP"
-                android:text="店铺类型" />
+                android:text="智能排序" />
         </FrameLayout>
 
         <FrameLayout

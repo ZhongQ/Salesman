@@ -29,6 +29,18 @@
             tools:text="(进店)" />
 
         <TextView
+            android:id="@+id/tv_num_signin"
+            style="@style/Text_009_24"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_20"
+            android:layout_toRightOf="@+id/tv_enter_leave_store"
+            android:background="@drawable/signin_num_bg"
+            android:gravity="center"
+            android:paddingLeft="@dimen/margin_8"
+            android:paddingRight="@dimen/margin_8"
+            tools:text="99" />
+
+        <TextView
             android:id="@+id/tv_signin_time"
             style="@style/Text_aaa_24"
             android:layout_alignParentRight="true"
@@ -79,7 +91,6 @@
         android:id="@+id/gv_signin_record"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
         android:cacheColorHint="@color/transparent"
         android:listSelector="@color/transparent"
         android:numColumns="4"

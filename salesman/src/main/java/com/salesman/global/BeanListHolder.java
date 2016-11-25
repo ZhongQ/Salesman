@@ -221,4 +221,15 @@ public class BeanListHolder {
         return data;
     }
 
+    /**
+     * 客户筛选之智能排序
+     *
+     * @return
+     */
+    public static List<FilterItem> getClientZhiNengFilter() {
+        List<FilterItem> data = new ArrayList<>();
+        data.add(new FilterItem("Distance", "离我最近"));
+        return data;
+    }
+
 }

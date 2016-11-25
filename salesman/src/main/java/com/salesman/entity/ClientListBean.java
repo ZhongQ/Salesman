@@ -56,6 +56,8 @@ public class ClientListBean extends BaseBean {
         public String salesmanName;
         public String proprietor;
 
+        public String distance;// V2.1.0
+
         public int imgId;// 图标背景
 
         public int getImgId() {

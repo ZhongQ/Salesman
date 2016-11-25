@@ -72,7 +72,7 @@ public class ClientMapActivity extends BaseActivity implements View.OnClickListe
     // 筛选数据
     private List<FilterItem> mSalesmans = new ArrayList<>();
     private List<FilterItem> mLines = new ArrayList<>();
-    private List<FilterItem> mTypes = new ArrayList<>();
+    private List<FilterItem> mTypes = BeanListHolder.getClientZhiNengFilter();// V2.1.0版本之前为类型筛选，现在改为智能排序
     private List<FilterItem> mRegisters = BeanListHolder.getClientRegisterFilter();
     private List<FilterItem> mVips = BeanListHolder.getClientVipFilter();
     private String salesmanId = "", lineId = "", typeId = "", registerId = "", vipType = "";
@@ -356,7 +356,7 @@ public class ClientMapActivity extends BaseActivity implements View.OnClickListe
                 break;
             case 2:// 类型
                 tvFiltrate3.setText(item.name);
-                typeId = item.id;
+//                typeId = item.id;// V2.1.0之后不进行类型筛选，改为刷新
                 break;
             case 3:// 注册
                 tvFiltrate4.setText(item.name);
@@ -453,17 +453,19 @@ public class ClientMapActivity extends BaseActivity implements View.OnClickListe
                     }
                     break;
                 case 2:// 类型
-                    if (ClientTypeUtil.isSecondRequest()) {
-                        showProgressDialog(getString(R.string.loading1), false);
-                        clientTypeUtil.getClientTypeData();
-                        index = -1;
-                        return;
-                    } else {
-                        if (mTypes.isEmpty()) {
-                            mTypes = ClientTypeUtil.getTypeFilterList();
-                        }
-                        clientPopup.addActionList(mTypes);
-                    }
+//                    if (ClientTypeUtil.isSecondRequest()) {
+//                        showProgressDialog(getString(R.string.loading1), false);
+//                        clientTypeUtil.getClientTypeData();
+//                        index = -1;
+//                        return;
+//                    } else {
+//                        if (mTypes.isEmpty()) {
+//                            mTypes = ClientTypeUtil.getTypeFilterList();
+//                        }
+//                        clientPopup.addActionList(mTypes);
+//                    }
+                    // V2.1.0修改后
+                    clientPopup.addActionList(mTypes);
                     break;
                 case 3:// 注册
                     clientPopup.addActionList(mRegisters);

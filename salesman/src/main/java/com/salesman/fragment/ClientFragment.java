@@ -11,6 +11,9 @@ import android.widget.ImageView;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 
+import com.baidu.location.BDLocation;
+import com.baidu.location.BDLocationListener;
+import com.baidu.location.LocationClient;
 import com.jude.easyrecyclerview.EasyRecyclerView;
 import com.jude.easyrecyclerview.adapter.BaseViewHolder;
 import com.jude.easyrecyclerview.adapter.RecyclerArrayAdapter;
@@ -34,14 +37,17 @@ import com.salesman.umeng.UmengAnalyticsUtil;
 import com.salesman.umeng.UmengConfig;
 import com.salesman.utils.ClientTypeUtil;
 import com.salesman.utils.EmptyViewUtil;
+import com.salesman.utils.LocationManagerUtil;
 import com.salesman.utils.SalesmanLineUtil;
 import com.salesman.utils.StaticData;
 import com.salesman.utils.StringUtil;
+import com.salesman.utils.ToastUtil;
 import com.salesman.utils.UserInfoPreference;
 import com.salesman.utils.UserInfoUtil;
 import com.salesman.view.OnCommonListener;
 import com.salesman.views.popupwindow.ClientPopup;
 import com.salesman.views.popupwindow.FilterItem;
+import com.studio.jframework.utils.LogUtils;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -78,7 +84,8 @@ public class ClientFragment extends BaseFragment implements View.OnClickListener
     // 筛选数据
     private List<FilterItem> mSalesmans = new ArrayList<>();
     private List<FilterItem> mLines = new ArrayList<>();
-    private List<FilterItem> mTypes = new ArrayList<>();
+    //    private List<FilterItem> mTypes = new ArrayList<>();// V2.1.0版本之前为类型筛选，现在改为智能排序
+    private List<FilterItem> mTypes = BeanListHolder.getClientZhiNengFilter();// V2.1.0版本之前为类型筛选，现在改为智能排序
     private List<FilterItem> mRegisters = BeanListHolder.getClientRegisterFilter();
     private List<FilterItem> mVips = BeanListHolder.getClientVipFilter();
     private String salesmanId = "";
@@ -86,9 +93,14 @@ public class ClientFragment extends BaseFragment implements View.OnClickListener
     private String typeId = "";
     private String registerId = "";
     private String vipType = "";
+    private double latitude = 0, longitude = 0;
     // 筛选工具
     private ClientTypeUtil clientTypeUtil;
     private SalesmanLineUtil salesmanLineUtil;
+    // 定位工具
+    private LocationManagerUtil locationManagerUtil;
+    private MySigninMapListener mySigninMapListener;
+    private LocationClient locationClient;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -128,6 +140,9 @@ public class ClientFragment extends BaseFragment implements View.OnClickListener
             }
         };
         recyclerView.setAdapterWithProgress(adapter);
+
+        locationManagerUtil = LocationManagerUtil.getInstance(mContext);
+        mySigninMapListener = new MySigninMapListener();
 
         initFiltrate(view);
     }
@@ -267,25 +282,32 @@ public class ClientFragment extends BaseFragment implements View.OnClickListener
                 mLines = SalesmanLineUtil.getLineFilterItemList(item.id);
                 tvFiltrate2.setText("全部线路");
                 lineId = "";
+                initialization();
                 break;
             case 1:// 线路
                 tvFiltrate2.setText(item.name);
                 lineId = item.id;
+                initialization();
                 break;
             case 2:// 类型
                 tvFiltrate3.setText(item.name);
-                typeId = item.id;
+//                typeId = item.id;
+                // 定位
+                showProgressDialog(getString(R.string.loading1), false);
+                locationClient = locationManagerUtil.initLocation(mContext, 0);
+                locationManagerUtil.startLocationListener(locationClient, mySigninMapListener);
                 break;
             case 3:// 注册
                 tvFiltrate4.setText(item.name);
                 registerId = item.id;
+                initialization();
                 break;
             case 4:// 重点客户
                 tvFiltrate5.setText(item.name);
                 vipType = item.id;
+                initialization();
                 break;
         }
-        initialization();
     }
 
     @Override
@@ -362,6 +384,10 @@ public class ClientFragment extends BaseFragment implements View.OnClickListener
         map.put("userType", mUserInfo.getUserType());
         map.put("pageNo", String.valueOf(pageNo));
         map.put("pageSize", String.valueOf(pageSize));
+        if (latitude != 0 && longitude != 0) {
+            map.put("latitude", String.valueOf(latitude));
+            map.put("longitude", String.valueOf(longitude));
+        }
         return map;
     }
 
@@ -454,17 +480,19 @@ public class ClientFragment extends BaseFragment implements View.OnClickListener
                     }
                     break;
                 case 2:// 类型
-                    if (ClientTypeUtil.isSecondRequest()) {
-                        showProgressDialog(getString(R.string.loading1), false);
-                        clientTypeUtil.getClientTypeData();
-                        index = -1;
-                        return;
-                    } else {
-                        if (mTypes.isEmpty()) {
-                            mTypes = ClientTypeUtil.getTypeFilterList();
-                        }
-                        clientPopup.addActionList(mTypes);
-                    }
+//                    if (ClientTypeUtil.isSecondRequest()) {
+//                        showProgressDialog(getString(R.string.loading1), false);
+//                        clientTypeUtil.getClientTypeData();
+//                        index = -1;
+//                        return;
+//                    } else {
+//                        if (mTypes.isEmpty()) {
+//                            mTypes = ClientTypeUtil.getTypeFilterList();
+//                        }
+//                        clientPopup.addActionList(mTypes);
+//                    }
+                    // V2.1.0修改后
+                    clientPopup.addActionList(mTypes);
                     break;
                 case 3:// 注册
                     clientPopup.addActionList(mRegisters);
@@ -485,6 +513,34 @@ public class ClientFragment extends BaseFragment implements View.OnClickListener
                     index = -1;
                 }
             });
+        }
+    }
+
+    /**
+     * 定位回调
+     */
+    public class MySigninMapListener implements BDLocationListener {
+
+        @Override
+        public void onReceiveLocation(BDLocation bdLocation) {
+            dismissProgressDialog();
+            locationManagerUtil.unRegisterLocationListener(locationClient, mySigninMapListener);
+            LogUtils.d(TAG, "=========定位");
+            if (bdLocation == null) {
+                ToastUtil.show(mContext, "定位失败");
+                return;
+            } else {
+                double lat = bdLocation.getLatitude();
+                double lng = bdLocation.getLongitude();
+                if (lat == 4.9E-324 || lng == 4.9E-324) {
+                    ToastUtil.show(mContext, "定位失败");
+                    return;
+                }
+                LogUtils.d(TAG, lat + "&&" + lng);
+                latitude = lat;
+                longitude = lng;
+                initialization();
+            }
         }
     }
 }
